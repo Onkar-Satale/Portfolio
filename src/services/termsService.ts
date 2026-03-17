@@ -45,17 +45,12 @@ const STATIC_TERMS: TermAndCondition[] = [
   {
     "id": "termination",
     "title": "Termination",
-    "content": "I reserve the right to terminate or suspend your account and bar access to the contact service immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach these Terms."
+    "content": "I reserve the right to bar access to the contact service immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach these Terms."
   },
   {
     "id": "intellectual",
     "title": "Intellectual Property",
     "content": "The Service and its original content, including but not limited to the design, text, graphics, project case studies, and logos, are the exclusive property of Satale Onkar K and are protected by copyright and other intellectual property laws. My work may not be used in connection with any product or service without my prior written consent."
-  },
-  {
-    "id": "accounts",
-    "title": "User Accounts",
-    "content": "To use the secure contact form, you must register for an account. You agree to provide accurate, current, and complete information during the registration process. You are responsible for safeguarding your password and for any activities or actions under your account. You must notify me immediately upon becoming aware of any breach of security or unauthorized use of your account."
   }
 ];
 

@@ -31,7 +31,7 @@ const STATIC_PROJECTS: Project[] = [
     tags: ["React", "Node.js", "GenAI", "MongoDB", "Express", "Python", "FastAPI", "Groq API"],
     members: [],
     liveLink: "https://packmatefrontend.vercel.app",
-    githubLink: "https://github.com/Onkar-Satale/packmate-genai-assistant", // Fallback generated
+    githubLink: "https://github.com/Onkar-Satale/Packmate_genai_mern-project", // Fallback generated
     featured: true,
     startDate: "2025-08-01",
     endDate: "2026-01-01"
@@ -91,7 +91,7 @@ const STATIC_PROJECTS: Project[] = [
     featured: true,
     startDate: "2025-12-01",
     endDate: "2026-01-01"
-  },{
+  }, {
     id: "academic-portal",
     name: "Academic Engagement Portal",
     category: { id: "all", name: "Web App" },
@@ -129,7 +129,7 @@ export const getProjects = async ({ page = 1, limit = 6, categoryId, name }: {
   if (name) {
     filtered = filtered.filter(p => p.name.toLowerCase().includes(name.toLowerCase()));
   }
-  
+
   // Fake pagination
   const startIndex = (page - 1) * limit;
   const paginated = filtered.slice(startIndex, startIndex + limit);
