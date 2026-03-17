@@ -26,6 +26,11 @@ app.use(express.json());
 
 // ------------------ Routes ------------------
 
+// Base health check route for Render
+app.get("/", (req, res) => {
+  res.status(200).json({ status: "success", message: "Portfolio Backend is running fine" });
+});
+
 // API Routes
 app.use("/api/auth", authRoutes);
 app.use("/api", portfolioRoutes);
