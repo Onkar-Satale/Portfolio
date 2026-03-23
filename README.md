@@ -7,7 +7,7 @@ This project showcases my skills, projects, and experience with a dynamic and in
 
 ## 🌐 Live Demo
 
-👉 (Add your deployed link here after deployment)
+👉 https://portfolio-mu-one-n3zkisj3jp.vercel.app/
 
 ---
 
