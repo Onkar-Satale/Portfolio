@@ -13,7 +13,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-20 md:py-28 bg-slate-100 dark:bg-transparent border-t border-slate-200 dark:border-slate-800 transition-colors duration-300">
+    <section id="contact" className="py-20 md:py-28 bg-slate-100 dark:bg-transparent border-t border-slate-200 dark:border-neutral-800 transition-colors duration-300">
       <div className="container mx-auto px-6 text-center">
         <SectionHeader 
           title="Get In Touch"

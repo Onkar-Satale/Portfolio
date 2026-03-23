@@ -44,7 +44,7 @@ export default function ProjectsPage() {
     const categories = categoriesResponse?.data || [];
 
     return (
-        <div className="bg-slate-50 dark:bg-slate-950 transition-colors duration-300 min-h-screen md:px-16">
+        <div className="bg-slate-50 dark:bg-black transition-colors duration-300 min-h-screen md:px-16">
             <ScrollToTop />
             <main className="container mx-auto px-6 py-4">
                 <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className='flex flex-col items-center'>
@@ -54,24 +54,24 @@ export default function ProjectsPage() {
                 <div className="my-10 space-y-6">
                     <div className='flex items-center justify-center'>
                         <div className="flex items-center justify-start gap-2 overflow-x-auto pb-2">
-                        <button onClick={() => handleCategoryChange('')} className={`cursor-pointer px-4 py-2 rounded-full text-sm font-semibold transition-colors whitespace-nowrap ${selectedCategoryId === '' ? 'bg-blue-600 text-white shadow-md' : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700'}`}>
+                        <button onClick={() => handleCategoryChange('')} className={`cursor-pointer px-4 py-2 rounded-full text-sm font-semibold transition-colors whitespace-nowrap ${selectedCategoryId === '' ? 'bg-blue-600 text-white shadow-md' : 'bg-white dark:bg-neutral-900 text-slate-600 dark:text-neutral-300 hover:bg-slate-100 dark:hover:bg-neutral-800'}`}>
                             All
                         </button>
                         {categories.map((cat: Category) => (
-                             <button key={cat.id} onClick={() => handleCategoryChange(cat.id)} className={`cursor-pointer px-4 py-2 rounded-full text-sm font-semibold transition-colors whitespace-nowrap ${selectedCategoryId === cat.id ? 'bg-blue-600 text-white shadow-md' : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700'}`}>
+                             <button key={cat.id} onClick={() => handleCategoryChange(cat.id)} className={`cursor-pointer px-4 py-2 rounded-full text-sm font-semibold transition-colors whitespace-nowrap ${selectedCategoryId === cat.id ? 'bg-blue-600 text-white shadow-md' : 'bg-white dark:bg-neutral-900 text-slate-600 dark:text-neutral-300 hover:bg-slate-100 dark:hover:bg-neutral-800'}`}>
                                 {cat.name}
                             </button>
                         ))}
                     </div>
                     </div>
                     <div className="relative">
-                        <FiSearch className="absolute top-1/2 left-4 -translate-y-1/2 text-slate-400 dark:text-slate-500" />
+                        <FiSearch className="absolute top-1/2 left-4 -translate-y-1/2 text-slate-400 dark:text-neutral-500" />
                         <input 
                             type="text" 
                             placeholder="Search projects by name, technology, etc..." 
                             value={searchTerm} 
                             onChange={(e) => setSearchTerm(e.target.value)} 
-                            className="pl-12 pr-4 py-3 w-full border border-slate-300 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-600 placeholder-slate-400 dark:placeholder-slate-500 transition-colors duration-300"
+                            className="pl-12 pr-4 py-3 w-full border border-slate-300 dark:border-neutral-700 rounded-lg bg-white dark:bg-[#0a0a0a] text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-600 placeholder-slate-400 dark:placeholder-neutral-500 transition-colors duration-300"
                         />
                     </div>
                 </div>
@@ -90,8 +90,8 @@ export default function ProjectsPage() {
                         ) : (
                             <div className="col-span-full text-center py-16">
                                 <FiPackage size={48} className="mx-auto text-slate-300"/>
-                                <h3 className="mt-4 text-xl font-semibold text-slate-700 dark:text-slate-200">No Projects Found</h3>
-                                <p className="text-slate-500 dark:text-slate-400 mt-2">There are no projects that match your current filters.</p>
+                                <h3 className="mt-4 text-xl font-semibold text-slate-700 dark:text-neutral-200">No Projects Found</h3>
+                                <p className="text-slate-500 dark:text-neutral-400 mt-2">There are no projects that match your current filters.</p>
                             </div>
                         )}
                     </motion.div>

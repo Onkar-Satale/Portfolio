@@ -89,7 +89,7 @@ export default function Header() {
         initial={false}
         animate={{ y: isHidden ? "-110%" : 0 }}
         transition={{ type: 'spring', stiffness: 400, damping: 40 }}
-        className={`fixed top-0 left-0 right-0 z-40 transition-shadow transition-colors duration-300  ${isScrolled ? 'bg-white/80 dark:bg-slate-950/80 shadow-md backdrop-blur-lg' : 'bg-slate-100/70 dark:bg-transparent'}`}
+        className={`fixed top-0 left-0 right-0 z-40 transition-shadow transition-colors duration-300  ${isScrolled ? 'bg-white/80 dark:bg-black/80 shadow-md backdrop-blur-lg' : 'bg-slate-100/70 dark:bg-transparent'}`}
       >
         <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
           <Link to="/" className="flex items-center gap-2" aria-label="Homepage">
@@ -98,13 +98,13 @@ export default function Header() {
           </Link>
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map(link => (
-              <button key={link.id} onClick={() => scrollToSection(link.id)} className="font-semibold text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">{link.label}</button>
+              <button key={link.id} onClick={() => scrollToSection(link.id)} className="font-semibold text-slate-600 dark:text-neutral-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">{link.label}</button>
             ))}
           </div>
           <div className="flex items-center gap-4">
             <button 
               onClick={() => setIsDarkMode(!isDarkMode)} 
-              className="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200 transition-colors"
+              className="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-neutral-900 text-slate-800 dark:text-neutral-200 transition-colors"
               aria-label="Toggle Dark Mode"
             >
               {isDarkMode ? <FiSun size={20} /> : <FiMoon size={20} />}
@@ -114,7 +114,7 @@ export default function Header() {
                 Contact Me
               </ActionButton>
             </div>
-            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden text-slate-800 dark:text-slate-200 z-50" aria-label="Toggle menu">
+            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden text-slate-800 dark:text-neutral-200 z-50" aria-label="Toggle menu">
               {isMenuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
             </button>
           </div>

@@ -5,7 +5,7 @@ export default function Toaster() {
     <HotToaster
       position="top-right"
       toastOptions={{
-        className: 'font-semibold dark:bg-slate-900 dark:text-white dark:border dark:border-slate-800',
+        className: 'font-semibold dark:bg-[#0a0a0a] dark:text-white dark:border dark:border-neutral-800',
         duration: 4000,
         style: {
           background: 'var(--toast-bg, #fff)',

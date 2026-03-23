@@ -48,12 +48,12 @@ export default function MobileMenu({ isOpen, onClose, scrollToSection, links }: 
             exit="hidden"
             variants={menuVariants}
             transition={{ type: 'spring', stiffness: 350, damping: 35 }}
-            className="fixed top-0 right-0 w-full max-w-sm h-full bg-white dark:bg-slate-950 shadow-xl z-50 flex flex-col"
+            className="fixed top-0 right-0 w-full max-w-sm h-full bg-white dark:bg-black shadow-xl z-50 flex flex-col"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="flex justify-between items-center p-6 border-b border-slate-200 dark:border-slate-800 flex-shrink-0">
+            <div className="flex justify-between items-center p-6 border-b border-slate-200 dark:border-neutral-800 flex-shrink-0">
               <h2 className="font-bold text-lg text-slate-800 dark:text-white">Menu</h2>
-              <button onClick={onClose} className="p-1 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white">
+              <button onClick={onClose} className="p-1 text-slate-500 dark:text-neutral-400 hover:text-slate-900 dark:hover:text-white">
                 <FiX size={24} />
               </button>
             </div>
@@ -68,14 +68,14 @@ export default function MobileMenu({ isOpen, onClose, scrollToSection, links }: 
                   animate="visible"
                   transition={{ delay: 0.1 + i * 0.05 }}
                   onClick={() => { scrollToSection(link.id); onClose(); }} 
-                  className="text-left font-semibold text-slate-800 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                  className="text-left font-semibold text-slate-800 dark:text-neutral-200 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                 >
                   {link.label}
                 </motion.button>
               ))}
             </nav>
 
-            <div className="flex-shrink-0 p-6 border-t border-slate-200 dark:border-slate-800 space-y-6">
+            <div className="flex-shrink-0 p-6 border-t border-slate-200 dark:border-neutral-800 space-y-6">
                 <button onClick={() => { scrollToSection('contact'); onClose(); }} className="w-full bg-blue-600 text-white text-center font-semibold px-5 py-3 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center gap-2">
                     <FiMail /> Contact Me
                 </button>

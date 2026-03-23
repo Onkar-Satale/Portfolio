@@ -20,7 +20,7 @@ export default function SectionHeader({ title, description, children }: SectionH
       <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">{title}</h2>
       
       {description && (
-        <p className="mt-4 max-w-4xl mx-auto text-lg text-slate-600 dark:text-slate-300">
+        <p className="mt-4 max-w-4xl mx-auto text-lg text-slate-600 dark:text-neutral-300">
           {description}
         </p>
       )}

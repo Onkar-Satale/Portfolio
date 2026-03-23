@@ -42,7 +42,7 @@ export default function TimelineItem({ item, isLast }: TimelineItemProps) {
     <div className="flex gap-4 sm:gap-6">
       {/* Timeline Dot and Line */}
       <div className="flex flex-col items-center flex-shrink-0">
-        <div className="flex-shrink-0 w-12 h-12 rounded-full bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 flex items-center justify-center shadow-sm overflow-hidden">
+        <div className="flex-shrink-0 w-12 h-12 rounded-full bg-white dark:bg-neutral-900 border-2 border-slate-200 dark:border-neutral-700 flex items-center justify-center shadow-sm overflow-hidden">
           {item.logo && (
             <img
               src={item.logo}
@@ -51,7 +51,7 @@ export default function TimelineItem({ item, isLast }: TimelineItemProps) {
             />
           )}
         </div>
-        {!isLast && <div className="w-px h-full bg-slate-200 dark:bg-slate-700 mt-2"></div>}
+        {!isLast && <div className="w-px h-full bg-slate-200 dark:bg-neutral-800 mt-2"></div>}
       </div>
 
       {/* Timeline Content */}
@@ -67,7 +67,7 @@ export default function TimelineItem({ item, isLast }: TimelineItemProps) {
               href={item.companyLink || '#'}
               target="_blank"
               rel="noopener noreferrer"
-              className={`inline-flex items-center gap-2 mt-1 font-semibold text-slate-600 dark:text-slate-300 ${item.companyLink && 'hover:text-blue-600 transition-colors'
+              className={`inline-flex items-center gap-2 mt-1 font-semibold text-slate-600 dark:text-neutral-300 ${item.companyLink && 'hover:text-blue-600 transition-colors'
                 }`}
             >
               {item.companyName}
@@ -81,7 +81,7 @@ export default function TimelineItem({ item, isLast }: TimelineItemProps) {
               href={item.institutionLink || '#'}
               target="_blank"
               rel="noopener noreferrer"
-              className={`inline-flex items-center gap-2 mt-1 font-semibold text-slate-600 dark:text-slate-300 ${item.institutionLink && 'hover:text-blue-600 transition-colors'
+              className={`inline-flex items-center gap-2 mt-1 font-semibold text-slate-600 dark:text-neutral-300 ${item.institutionLink && 'hover:text-blue-600 transition-colors'
                 }`}
             >
               {item.institutionName}
@@ -92,7 +92,7 @@ export default function TimelineItem({ item, isLast }: TimelineItemProps) {
 
         {item.description && (
           <>
-            <p className={`mt-4 text-slate-600 dark:text-slate-300 leading-relaxed ${!isExpanded && 'line-clamp-3'}`}>
+            <p className={`mt-4 text-slate-600 dark:text-neutral-300 leading-relaxed ${!isExpanded && 'line-clamp-3'}`}>
               {item.description}
             </p>
             {isDescriptionLong && (
@@ -130,7 +130,7 @@ export default function TimelineItem({ item, isLast }: TimelineItemProps) {
               return (
                 <div
                   key={skillName + index}
-                  className="flex items-center gap-1 text-xs bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-200 font-medium px-2 py-1 rounded-full"
+                  className="flex items-center gap-1 text-xs bg-slate-200 dark:bg-neutral-800 text-slate-700 dark:text-neutral-200 font-medium px-2 py-1 rounded-full"
                 >
                   {skillImage && <img src={skillImage} alt={skillName} className="w-4 h-4 object-contain" />}
                   <span>{skillName}</span>

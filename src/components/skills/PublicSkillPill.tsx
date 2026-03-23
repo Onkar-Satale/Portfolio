@@ -16,10 +16,10 @@ export default function PublicSkillPill({ skill }: { skill: Skill }) {
   return (
     <motion.div
       variants={pillVariants}
-      className="bg-white dark:bg-slate-800 rounded-full border border-slate-200 dark:border-slate-700 px-4 py-2 flex items-center gap-3 shadow-sm transition-all duration-300 ease-in-out hover:shadow-md hover:border-slate-300 dark:hover:border-slate-600"
+      className="bg-white dark:bg-neutral-900 rounded-full border border-slate-200 dark:border-neutral-700 px-4 py-2 flex items-center gap-3 shadow-sm transition-all duration-300 ease-in-out hover:shadow-md hover:border-slate-300 dark:hover:border-neutral-600"
     >
       {skill.icon && <span className="text-2xl">{skill.icon}</span>}
-      <p className="font-semibold text-slate-700 dark:text-slate-200">{skill.name}</p>
+      <p className="font-semibold text-slate-700 dark:text-neutral-200">{skill.name}</p>
     </motion.div>
   );
 }

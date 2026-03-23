@@ -59,7 +59,7 @@ export default function TermsPage() {
 
   return (
     
-    <div className="container mx-auto px-6 py-8 md:pb-24 bg-white dark:bg-slate-950 transition-colors duration-300 min-h-screen max-w-none">
+    <div className="container mx-auto px-6 py-8 md:pb-24 bg-white dark:bg-black transition-colors duration-300 min-h-screen max-w-none">
       <ScrollToTop />
 
       {/* Header Section */}
@@ -83,7 +83,7 @@ export default function TermsPage() {
                   <button
                     onClick={() => handleScrollTo(term.id)}
                     // Improved styling for the active link
-                    className={`block w-full text-left py-1.5 text-sm font-medium transition-all duration-200 border-l-2 ${activeId === term.id ? 'text-blue-600 border-blue-600 pl-4' : 'text-slate-500 dark:text-slate-400 border-transparent hover:text-slate-900 dark:hover:text-white hover:border-slate-300 dark:hover:border-slate-600 pl-4'}`}
+                    className={`block w-full text-left py-1.5 text-sm font-medium transition-all duration-200 border-l-2 ${activeId === term.id ? 'text-blue-600 border-blue-600 pl-4' : 'text-slate-500 dark:text-neutral-400 border-transparent hover:text-slate-900 dark:hover:text-white hover:border-slate-300 dark:hover:border-neutral-600 pl-4'}`}
                   >
                     {term.title}
                   </button>
@@ -104,18 +104,18 @@ export default function TermsPage() {
                 onViewportEnter={() => setActiveId(term.id)}
                 viewport={{ margin: "-40% 0px -60% 0px" }}
               >
-                <h2 className="text-3xl font-bold text-slate-900 dark:text-white border-b border-slate-200 dark:border-slate-800 pb-3 mb-6">{term.title}</h2>
+                <h2 className="text-3xl font-bold text-slate-900 dark:text-white border-b border-slate-200 dark:border-neutral-800 pb-3 mb-6">{term.title}</h2>
                 
                 {term.imagePath && (
                     <div className='flex justify-start'>
-                        <div className="my-6 p-2 bg-slate-100 dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700">
+                        <div className="my-6 p-2 bg-slate-100 dark:bg-neutral-900 rounded-lg border border-slate-200 dark:border-neutral-700">
                             <img src={term.imagePath} alt={term.title} className="rounded-md w-full max-h-80 object-contain" />
                         </div>
                     </div>
                 )}
 
                 {/* The 'prose' classes from Tailwind Typography provide beautiful default styling for your text */}
-                <div className="prose prose-lg prose-slate dark:prose-invert max-w-none leading-relaxed text-slate-600 dark:text-slate-300">
+                <div className="prose prose-lg prose-slate dark:prose-invert max-w-none leading-relaxed text-slate-600 dark:text-neutral-300">
                   <ReactMarkdown>{term.content}</ReactMarkdown>
                 </div>
               </motion.section>

@@ -65,7 +65,7 @@ export default function SkillsSection() {
   // Loading state
   if (isLoading) {
     return (
-      <section id="skills" className="py-20 md:py-28 border-y bg-slate-50 dark:bg-slate-950 border-slate-200 dark:border-slate-800 transition-colors duration-300">
+      <section id="skills" className="py-20 md:py-28 border-y bg-slate-50 dark:bg-black border-slate-200 dark:border-neutral-800 transition-colors duration-300">
         <div className="container mx-auto px-6 min-h-[20rem] flex items-center justify-center">
           <Loader />
         </div>
@@ -76,8 +76,8 @@ export default function SkillsSection() {
   // Error or empty fallback
   if (isError || categories.length === 0) {
     return (
-      <section id="skills" className="py-20 md:py-28 border-y bg-slate-50 dark:bg-slate-950 border-slate-200 dark:border-slate-800 transition-colors duration-300">
-        <div className="container mx-auto px-6 text-center text-slate-600 dark:text-slate-400">
+      <section id="skills" className="py-20 md:py-28 border-y bg-slate-50 dark:bg-black border-slate-200 dark:border-neutral-800 transition-colors duration-300">
+        <div className="container mx-auto px-6 text-center text-slate-600 dark:text-neutral-400">
           <h3 className="text-xl font-semibold mb-2 text-slate-800 dark:text-white">No skills found ⚠️</h3>
           <p>Check your Firebase “skills” collection or data format.</p>
         </div>
@@ -88,7 +88,7 @@ export default function SkillsSection() {
   return (
     <motion.section
       id="skills"
-      className="py-20 md:py-28 border-y bg-slate-50 dark:bg-slate-950 border-slate-200 dark:border-slate-800 transition-colors duration-300"
+      className="py-20 md:py-28 border-y bg-slate-50 dark:bg-black border-slate-200 dark:border-neutral-800 transition-colors duration-300"
       onViewportEnter={() => setHasBeenInView(true)}
       viewport={{ once: true, amount: 0.2 }}
     >
@@ -138,7 +138,7 @@ export default function SkillsSection() {
                         : skill.iconKey && ICON_MAP[skill.iconKey]
                           ? ICON_MAP[skill.iconKey]
                           : (
-                            <div className="w-6 h-6 flex items-center justify-center bg-slate-200 dark:bg-slate-700 rounded-full text-xs font-bold text-slate-600 dark:text-slate-300">
+                            <div className="w-6 h-6 flex items-center justify-center bg-slate-200 dark:bg-neutral-800 rounded-full text-xs font-bold text-slate-600 dark:text-neutral-300">
                               {skill.name?.charAt(0) || '?'}
                             </div>
                           );
@@ -155,7 +155,7 @@ export default function SkillsSection() {
                       );
                     })
                   ) : (
-                    <p className="text-slate-500 dark:text-slate-400 text-sm text-center w-full">
+                    <p className="text-slate-500 dark:text-neutral-400 text-sm text-center w-full">
                       No skills added for this category yet.
                     </p>
                   )}

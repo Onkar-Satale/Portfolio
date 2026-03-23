@@ -4,7 +4,7 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 body {
-  @apply font-sans bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-200 transition-colors duration-300;
+  @apply font-sans bg-slate-50 text-slate-800 dark:bg-black dark:text-neutral-200 transition-colors duration-300;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
@@ -16,13 +16,13 @@ body {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  @apply bg-slate-100 dark:bg-slate-900;
+  @apply bg-slate-100 dark:bg-[#0a0a0a];
 }
 ::-webkit-scrollbar-thumb {
-  @apply bg-slate-300 dark:bg-slate-700 rounded;
+  @apply bg-slate-300 dark:bg-neutral-800 rounded;
 }
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-slate-400 dark:bg-slate-600;
+  @apply bg-slate-400 dark:bg-neutral-600;
 }
 
 .prose a {

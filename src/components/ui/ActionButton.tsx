@@ -22,7 +22,7 @@ export default function ActionButton({
   
   const styles = {
     primary: 'bg-blue-600 text-white hover:bg-blue-700 hover:shadow-blue-500/40',
-    outline: 'bg-white dark:bg-transparent text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600 hover:bg-slate-50 dark:hover:bg-slate-800 hover:shadow-slate-200/50 dark:hover:shadow-none'
+    outline: 'bg-white dark:bg-transparent text-slate-700 dark:text-neutral-200 border border-slate-200 dark:border-neutral-700 hover:border-slate-300 dark:hover:border-neutral-600 hover:bg-slate-50 dark:hover:bg-neutral-900 hover:shadow-slate-200/50 dark:hover:shadow-none'
   };
 
   const fullClassName = `${baseClasses} ${styles[variant]} ${className}`;

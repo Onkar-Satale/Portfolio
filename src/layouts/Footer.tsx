@@ -28,15 +28,15 @@ export default function Footer() {
     }, [links]);
 
     return (
-        <footer className="bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 transition-colors duration-300">
+        <footer className="bg-slate-50 dark:bg-black border-t border-slate-200 dark:border-neutral-800 transition-colors duration-300">
             <div className="container mx-auto px-6">
-                <div className="border-t border-slate-200 dark:border-slate-800 py-6 flex flex-col lg:flex-row justify-between items-center gap-6">
+                <div className="border-t border-slate-200 dark:border-neutral-800 py-6 flex flex-col lg:flex-row justify-between items-center gap-6">
                     <div className="text-center lg:text-left">
                         <Link to="/" className="flex items-center justify-center lg:justify-start gap-2 mb-2">
                             <FiBox className="w-6 h-6 text-blue-600" />
                             <span className="text-lg font-bold text-slate-800 dark:text-white">MyMind</span>
                         </Link>
-                        <p className="text-xs text-slate-500 dark:text-slate-400">
+                        <p className="text-xs text-slate-500 dark:text-neutral-400">
                             &copy; {currentYear} Satale Onkar K. All Rights Reserved.
                         </p>
                     </div>
@@ -48,7 +48,7 @@ export default function Footer() {
                                 href={githubLink}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-slate-500 dark:text-slate-400 hover:text-black dark:hover:text-white transition-colors"
+                                className="text-slate-500 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors"
                             >
                                 <FaGithub size={20} />
                             </a>
@@ -58,7 +58,7 @@ export default function Footer() {
                                 href={linkedinLink}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-colors"
+                                className="text-slate-500 dark:text-neutral-400 hover:text-blue-600 transition-colors"
                             >
                                 <FaLinkedin size={20} />
                             </a>
@@ -67,7 +67,7 @@ export default function Footer() {
                         {/* Terms & Conditions */}
                         <Link
                             to="/terms"
-                            className="text-sm text-slate-500 dark:text-slate-400 hover:text-blue-600 hover:underline transition-colors"
+                            className="text-sm text-slate-500 dark:text-neutral-400 hover:text-blue-600 hover:underline transition-colors"
                         >
                             Terms & Conditions
                         </Link>
@@ -75,7 +75,7 @@ export default function Footer() {
                         {/* Scroll to top button */}
                         <button
                             onClick={handleScrollToTop}
-                            className="text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-colors"
+                            className="text-slate-500 dark:text-neutral-400 hover:text-blue-600 transition-colors"
                             title="Back to top"
                         >
                             <FiArrowUp size={20} />

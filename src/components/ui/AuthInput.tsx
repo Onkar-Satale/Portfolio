@@ -20,13 +20,13 @@ export default function AuthInput({ id, label, register, icon, error, ...props }
         {...register}
         {...props}
         placeholder=" " // The space is crucial for the floating label to work
-        className={`block w-full rounded-lg border py-3 px-4 pl-10 text-base appearance-none focus:outline-none focus:ring-0 peer transition-colors duration-300 ${error ? 'border-red-500 text-red-600 focus:border-red-500 focus:ring-red-500' : 'bg-transparent border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white focus:border-blue-600 focus:ring-blue-600 dark:focus:border-blue-600 dark:[&:-webkit-autofill]:[!background-color:transparent] dark:[&:-webkit-autofill]:[box-shadow:0_0_0_1000px_#020617_inset_!important] dark:[&:-webkit-autofill]:[-webkit-text-fill-color:white_!important]'}`}
+        className={`block w-full rounded-lg border py-3 px-4 pl-10 text-base appearance-none focus:outline-none focus:ring-0 peer transition-colors duration-300 ${error ? 'border-red-500 text-red-600 focus:border-red-500 focus:ring-red-500' : 'bg-transparent border-slate-300 dark:border-neutral-700 text-slate-900 dark:text-white focus:border-blue-600 focus:ring-blue-600 dark:focus:border-neutral-700 dark:[&:-webkit-autofill]:[!background-color:transparent] dark:[&:-webkit-autofill]:[box-shadow:0_0_0_1000px_#020617_inset_!important] dark:[&:-webkit-autofill]:[-webkit-text-fill-color:white_!important]'}`}
       />
       {/* THIS IS THE FIX: The label now uses peer-focus and peer-[:not(:placeholder-shown)]
           to correctly stay floated up when the input has a value. */}
       <label
         htmlFor={id}
-        className={`absolute text-sm duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white dark:bg-slate-950 px-2 left-8 ${error ? 'text-red-600' : 'text-slate-500 dark:text-slate-400 peer-focus:text-blue-600'} peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-1.5 peer-placeholder-shown:text-slate-400 peer-focus:scale-75 peer-focus:-translate-y-4`}
+        className={`absolute text-sm duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white dark:bg-black px-2 left-8 ${error ? 'text-red-600' : 'text-slate-500 dark:text-neutral-400 peer-focus:text-blue-600'} peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-1.5 peer-placeholder-shown:text-slate-400 peer-focus:scale-75 peer-focus:-translate-y-4`}
       >
         {label}
       </label>

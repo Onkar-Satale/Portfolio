@@ -56,25 +56,25 @@ export default function ContactForm() {
           name="name"
           control={control}
           rules={{ required: true }}
-          render={({ field }) => <input {...field} placeholder="Your Name" className="w-full p-3 border border-slate-300 dark:border-slate-700 rounded-lg bg-transparent text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-600 transition-colors duration-300 placeholder-slate-400 dark:placeholder-slate-500 dark:[&:-webkit-autofill]:[box-shadow:0_0_0_1000px_#020617_inset_!important] dark:[&:-webkit-autofill]:[-webkit-text-fill-color:white_!important]" />}
+          render={({ field }) => <input {...field} placeholder="Your Name" className="w-full p-3 border border-slate-300 dark:border-neutral-700 rounded-lg bg-transparent text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-600 transition-colors duration-300 placeholder-slate-400 dark:placeholder-neutral-500 dark:[&:-webkit-autofill]:[box-shadow:0_0_0_1000px_#0a0a0a_inset_!important] dark:[&:-webkit-autofill]:[-webkit-text-fill-color:white_!important]" />}
         />
         <Controller
           name="email"
           control={control}
           rules={{ required: true }}
-          render={({ field }) => <input {...field} type="email" placeholder="Your Email" className="w-full p-3 border border-slate-300 dark:border-slate-700 rounded-lg bg-transparent text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-600 transition-colors duration-300 placeholder-slate-400 dark:placeholder-slate-500 dark:[&:-webkit-autofill]:[box-shadow:0_0_0_1000px_#020617_inset_!important] dark:[&:-webkit-autofill]:[-webkit-text-fill-color:white_!important]" />}
+          render={({ field }) => <input {...field} type="email" placeholder="Your Email" className="w-full p-3 border border-slate-300 dark:border-neutral-700 rounded-lg bg-transparent text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-600 transition-colors duration-300 placeholder-slate-400 dark:placeholder-neutral-500 dark:[&:-webkit-autofill]:[box-shadow:0_0_0_1000px_#0a0a0a_inset_!important] dark:[&:-webkit-autofill]:[-webkit-text-fill-color:white_!important]" />}
         />
         <Controller
           name="subject"
           control={control}
           rules={{ required: true }}
-          render={({ field }) => <input {...field} placeholder="Subject" className="w-full p-3 border border-slate-300 dark:border-slate-700 rounded-lg bg-transparent text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-600 transition-colors duration-300 placeholder-slate-400 dark:placeholder-slate-500 dark:[&:-webkit-autofill]:[box-shadow:0_0_0_1000px_#020617_inset_!important] dark:[&:-webkit-autofill]:[-webkit-text-fill-color:white_!important]" />}
+          render={({ field }) => <input {...field} placeholder="Subject" className="w-full p-3 border border-slate-300 dark:border-neutral-700 rounded-lg bg-transparent text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-600 transition-colors duration-300 placeholder-slate-400 dark:placeholder-neutral-500 dark:[&:-webkit-autofill]:[box-shadow:0_0_0_1000px_#0a0a0a_inset_!important] dark:[&:-webkit-autofill]:[-webkit-text-fill-color:white_!important]" />}
         />
         <Controller
           name="message"
           control={control}
           rules={{ required: true }}
-          render={({ field }) => <textarea {...field} placeholder="Your message..." rows={5} className="w-full p-3 border border-slate-300 dark:border-slate-700 rounded-lg bg-transparent text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-600 transition-colors duration-300 placeholder-slate-400 dark:placeholder-slate-500" />}
+          render={({ field }) => <textarea {...field} placeholder="Your message..." rows={5} className="w-full p-3 border border-slate-300 dark:border-neutral-700 rounded-lg bg-transparent text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-600 transition-colors duration-300 placeholder-slate-400 dark:placeholder-neutral-500" />}
         />
         <Button type="submit" isLoading={mutation.isPending} className="w-full !py-3">
           Send Message

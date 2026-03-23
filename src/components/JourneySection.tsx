@@ -35,7 +35,7 @@ export default function JourneySection() {
   return (
     <motion.section
       id="journey"
-      className="py-20 md:py-28 bg-slate-50 dark:bg-slate-950 border-y border-slate-200 dark:border-slate-800 transition-colors duration-300"
+      className="py-20 md:py-28 bg-slate-50 dark:bg-black border-y border-slate-200 dark:border-neutral-800 transition-colors duration-300"
       onViewportEnter={() => setInView(true)}
       viewport={{ once: true, amount: 0.1 }}
     >
@@ -43,7 +43,7 @@ export default function JourneySection() {
         <SectionHeader title="My Journey" description="Taught by books, trained by bugs, Here is how I learned." />
 
         <div className="mt-12 flex justify-center">
-          <div className="flex items-center p-1.5 bg-slate-200/80 dark:bg-slate-800/80 rounded-full">
+          <div className="flex items-center p-1.5 bg-slate-200/80 dark:bg-neutral-900/80 rounded-full">
             {tabs.map(tab => (
               <button
                 key={tab.id}
@@ -53,11 +53,11 @@ export default function JourneySection() {
                 {activeTab === tab.id && (
                   <motion.div
                     layoutId="active-journey-tab-indicator"
-                    className="absolute inset-0 bg-white dark:bg-slate-700 rounded-full shadow-md"
+                    className="absolute inset-0 bg-white dark:bg-neutral-800 rounded-full shadow-md"
                     transition={{ type: 'spring', stiffness: 300, damping: 25 }}
                   />
                 )}
-                <span className={`relative z-10 transition-colors ${activeTab === tab.id ? 'text-blue-600' : 'text-slate-600 dark:text-slate-300'}`}>
+                <span className={`relative z-10 transition-colors ${activeTab === tab.id ? 'text-blue-600' : 'text-slate-600 dark:text-neutral-300'}`}>
                   {tab.label}
                 </span>
               </button>

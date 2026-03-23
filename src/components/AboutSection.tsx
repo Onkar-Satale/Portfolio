@@ -196,7 +196,7 @@ export default function AboutSection({ about, links }: AboutSectionProps) {
               {currentRole}<span className="animate-ping">|</span>
             </p>
 
-            <p className="mt-6 text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-xl whitespace-pre-wrap">
+            <p className="mt-6 text-lg text-slate-600 dark:text-neutral-300 leading-relaxed max-w-xl whitespace-pre-wrap">
               {about.description}
             </p>
 
@@ -224,11 +224,11 @@ export default function AboutSection({ about, links }: AboutSectionProps) {
             transition={{ duration: 0.8, ease: [0, 0.71, 0.2, 1.01] }}
             className="w-full max-w-sm mx-auto order-1 md:order-2"
           >
-            <div className="relative p-2 rounded-full border-2 border-slate-200 dark:border-slate-800">
+            <div className="relative p-2 rounded-full border-2 border-slate-200 dark:border-neutral-800">
               {about.image ? (
                 <img src={about.image} alt={about.name} className="w-full rounded-full aspect-square object-cover" />
               ) : (
-                <div className="bg-slate-200 dark:bg-slate-800 rounded-full aspect-square"></div>
+                <div className="bg-slate-200 dark:bg-neutral-900 rounded-full aspect-square"></div>
               )}
             </div>
           </motion.div>

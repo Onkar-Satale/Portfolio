@@ -31,9 +31,9 @@ export default function ProjectDetailPage() {
 
   if (isError || !project) {
     return (
-        <div className="bg-slate-50 dark:bg-slate-950 min-h-screen flex flex-col items-center justify-center text-center p-6 transition-colors duration-300">
+        <div className="bg-slate-50 dark:bg-black min-h-screen flex flex-col items-center justify-center text-center p-6 transition-colors duration-300">
             <h2 className="text-2xl font-bold text-slate-800 dark:text-white">Project Not Found</h2>
-            <p className="mt-2 text-slate-500 dark:text-slate-400">The project you are looking for does not exist or could not be loaded.</p>
+            <p className="mt-2 text-slate-500 dark:text-neutral-400">The project you are looking for does not exist or could not be loaded.</p>
         </div>
     );
   }
@@ -44,7 +44,7 @@ export default function ProjectDetailPage() {
   const isDescriptionLong = descriptionText.length > 300;
 
   return (
-    <div className="bg-white dark:bg-slate-950 transition-colors duration-300 min-h-screen">
+    <div className="bg-white dark:bg-black transition-colors duration-300 min-h-screen">
       <ScrollToTop />
       <main className="sm:px-4 lg:px-6 py-6">
         <div className="container mx-auto px-6">
@@ -52,14 +52,14 @@ export default function ProjectDetailPage() {
                 <div className="text-center">
                     <span className="text-sm font-bold text-blue-600 uppercase tracking-widest">{project.category.name}</span>
                     <h1 className="text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white mt-2">{project.name}</h1>
-                    <p className="text-slate-500 dark:text-slate-400 mt-3 flex items-center justify-center gap-2">
+                    <p className="text-slate-500 dark:text-neutral-400 mt-3 flex items-center justify-center gap-2">
                         <FiCalendar/>
                         <span>{formatDate(project.startDate)} - {project.endDate ? formatDate(project.endDate) : 'Present'}</span>
                     </p>
                 </div>
             </motion.div>
 
-            <motion.div initial={{opacity: 0, y: 20}} animate={{opacity: 1, y: 0}} transition={{duration: 0.5, delay: 0.2}} className="flex items-center justify-center m-auto my-12 p-2 sm:p-4 bg-slate-100 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 max-w-3xl">
+            <motion.div initial={{opacity: 0, y: 20}} animate={{opacity: 1, y: 0}} transition={{duration: 0.5, delay: 0.2}} className="flex items-center justify-center m-auto my-12 p-2 sm:p-4 bg-slate-100 dark:bg-neutral-900 rounded-xl border border-slate-200 dark:border-neutral-700 max-w-3xl">
                 {project.projectImage && (
                     <img src={project.projectImage} alt={project.name} className="rounded-lg object-contain" />
                 )}
@@ -70,7 +70,7 @@ export default function ProjectDetailPage() {
                     <h2 className="text-2xl font-bold text-slate-800 dark:text-white">About this Project</h2>
                     
                     <div
-                      className={`project-description prose prose-lg max-w-none text-slate-600 dark:text-slate-300 leading-relaxed ${!isDescriptionExpanded && isDescriptionLong ? 'line-clamp-6' : ''}`}
+                      className={`project-description prose prose-lg max-w-none text-slate-600 dark:text-neutral-300 leading-relaxed ${!isDescriptionExpanded && isDescriptionLong ? 'line-clamp-6' : ''}`}
                       dangerouslySetInnerHTML={{ __html: descriptionText }}
                     />
                     
@@ -97,11 +97,11 @@ export default function ProjectDetailPage() {
                                     {member.profileImage ? (
                                         <img src={member.profileImage} alt={member.name} className="w-10 h-10 rounded-full object-cover"/>
                                     ) : (
-                                        <div className="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center"><FiUser className="text-slate-400"/></div>
+                                        <div className="w-10 h-10 rounded-full bg-slate-200 dark:bg-neutral-900 flex items-center justify-center"><FiUser className="text-slate-400"/></div>
                                     )}
                                     <div className='flex-1'>
-                                        <p className="font-semibold text-slate-700 dark:text-slate-200">{member.name}</p>
-                                        <p className="text-sm text-slate-500 dark:text-slate-400">{role}</p>
+                                        <p className="font-semibold text-slate-700 dark:text-neutral-200">{member.name}</p>
+                                        <p className="text-sm text-slate-500 dark:text-neutral-400">{role}</p>
                                     </div>
                                     <div className="flex items-center gap-4 flex-shrink-0">
                                         {member.githubLink && <a href={member.githubLink} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-slate-800 dark:hover:text-white"><FaGithub className='w-5 h-5'/></a>}
@@ -118,12 +118,12 @@ export default function ProjectDetailPage() {
                     <div>
                         <h3 className="text-lg font-bold text-slate-800 dark:text-white flex items-center gap-2"><FiTag/> Technologies</h3>
                         <div className="flex flex-wrap gap-2 mt-3">
-                            {project.tags?.map(tag => <span key={tag} className="bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-200 text-sm font-medium px-3 py-1 rounded-full">{tag}</span>)}
+                            {project.tags?.map(tag => <span key={tag} className="bg-slate-200 dark:bg-neutral-900 text-slate-700 dark:text-neutral-200 text-sm font-medium px-3 py-1 rounded-full">{tag}</span>)}
                         </div>
                     </div>
-                    <div className="flex items-center gap-4 pt-4 border-t border-slate-200 dark:border-slate-800">
-                        {project.githubLink && <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 font-semibold text-slate-600 dark:text-slate-300 hover:text-blue-600"><FaGithub/> Code</a>}
-                        {project.liveLink && <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 font-semibold text-slate-600 dark:text-slate-300 hover:text-blue-600"><FiExternalLink/> Live Demo</a>}
+                    <div className="flex items-center gap-4 pt-4 border-t border-slate-200 dark:border-neutral-800">
+                        {project.githubLink && <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 font-semibold text-slate-600 dark:text-neutral-300 hover:text-blue-600"><FaGithub/> Code</a>}
+                        {project.liveLink && <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 font-semibold text-slate-600 dark:text-neutral-300 hover:text-blue-600"><FiExternalLink/> Live Demo</a>}
                     </div>
                 </div>
             </motion.div>
