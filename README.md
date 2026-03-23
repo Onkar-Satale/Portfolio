@@ -124,9 +124,37 @@ JWT_SECRET=your_secret_key
 
 ## 📸 Screenshots
 
-(Add screenshots here from your project)
+Here are key pages from my portfolio, highlighting UI, features, and light/dark mode.
 
 ---
+
+### 🌟 Landing Page
+![Landing Page](assets/LandingPage.png)  
+*Main landing page showcasing navigation and responsive design. Light/Dark mode toggle available.*
+
+---
+
+### 📝 About / Skills
+![Skills](assets/Skills.png)  
+*Skills section highlighting my technical expertise and professional summary.*
+
+---
+
+### 💻 Projects
+![Projects](assets/Projects.png)  
+*Projects showcase, including PackMate: AI-powered travel assistant.*
+
+---
+
+### 🎓 Education
+![Education](assets/Education.png)  
+*Education and academic timeline, highlighting key milestones.*
+
+---
+
+### 📬 Contact
+![Contact](assets/Contact.png)  
+*Contact section with interactive form and social links.*
 
 ## 🚀 Future Improvements
 
