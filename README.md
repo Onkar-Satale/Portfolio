@@ -156,6 +156,8 @@ Here are key pages from my portfolio, highlighting UI, features, and light/dark 
 ![Contact](assets/Contact.png)  
 *Contact section with interactive form and social links.*
 
+---
+
 ## 🚀 Future Improvements
 
 * 🤖 AI chatbot integration
