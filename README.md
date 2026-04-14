@@ -1,6 +1,6 @@
 # 🚀 Portfolio Website
 
-A modern, portfolio web application built using React, Tailwidn CSS.
+A modern, portfolio web application built using React, Tailwind CSS ,Typescript.
 This project showcases my skills, projects, and experience with a dynamic and interactive UI.
 
 ---
