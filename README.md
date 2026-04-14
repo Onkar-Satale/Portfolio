@@ -1,6 +1,6 @@
-# 🚀 Portfolio Website (Full Stack MERN)
+# 🚀 Portfolio Website
 
-A modern, full-stack portfolio web application built using React, Node.js, and Express.
+A modern, portfolio web application built using React, Tailwidn CSS.
 This project showcases my skills, projects, and experience with a dynamic and interactive UI.
 
 ---
@@ -14,8 +14,7 @@ This project showcases my skills, projects, and experience with a dynamic and in
 ## 📌 Features
 
 * ✨ Fully responsive modern UI
-* 🔐 Public authentication system (OTP-based / modal login)
-* 📬 Contact form with backend integration
+* 📬 Contact form with Web3forms API integration
 * 📂 Dynamic project showcase
 * 🧠 Skills & journey timeline sections
 * 🌙 Dark mode support
@@ -32,25 +31,12 @@ This project showcases my skills, projects, and experience with a dynamic and in
 * Vite
 * Tailwind CSS
 
-### Backend
-
-* Node.js
-* Express.js
-* MongoDB (Mongoose)
-
 ---
 
 ## 📁 Project Structure
 
 ```
 portfolio_light/
-│
-├── backend/              # Backend (Node.js + Express)
-│   ├── models/
-│   ├── routes/
-│   ├── db.js
-│   └── server.js
-│
 ├── src/                  # Frontend (React)
 │   ├── components/
 │   ├── pages/
@@ -84,40 +70,14 @@ cd Portfolio
 npm install
 ```
 
-#### Backend
-
-```bash
-cd backend
-npm install
-```
-
 ---
 
 ### 3️⃣ Run the project
 
-#### Start Backend
-
-```bash
-cd backend
-npm start
-```
-
 #### Start Frontend
 
 ```bash
-npm run dev
-```
-
----
-
-## 🔐 Environment Variables
-
-Create a `.env` file inside the backend folder:
-
-```
-PORT=5000
-MONGO_URI=your_mongodb_connection
-JWT_SECRET=your_secret_key
+npm start 
 ```
 
 ---
