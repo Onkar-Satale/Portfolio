@@ -38,11 +38,14 @@ This project showcases my skills, projects, and experience with a dynamic and in
 ```
 portfolio_light/
 ├── src/                  # Frontend (React)
+│   ├── assets/
 │   ├── components/
+│   ├── context/
+│   ├── hooks/
+│   ├── layout/
 │   ├── pages/
-│   ├── layouts/
+│   ├── routes/
 │   ├── services/
-│   └── context/
 │
 ├── public/
 ├── package.json
