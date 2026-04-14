@@ -30,7 +30,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         visible: { opacity: 1, y: 0 }
     };
 
-    const isCompleted = !!project.endDate;
+    const isCompleted = project.endDate ? new Date(project.endDate) < new Date() : false;
     const statusText = isCompleted ? 'Completed' : 'In Progress';
     const statusColor = isCompleted ? 'bg-emerald-100 text-emerald-800' : 'bg-amber-100 text-amber-800';
 

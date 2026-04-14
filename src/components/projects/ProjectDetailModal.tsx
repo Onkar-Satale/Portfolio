@@ -14,6 +14,10 @@ export default function ProjectDetailModal({ isOpen, onClose, project }: Project
 
   const formatDate = (dateString: string) => new Date(dateString).toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
 
+  const isCompleted = project.endDate ? new Date(project.endDate) < new Date() : false;
+  const statusText = isCompleted ? 'Completed' : 'In Progress';
+  const statusColor = isCompleted ? 'bg-emerald-100 text-emerald-800' : 'bg-amber-100 text-amber-800';
+
   return (
     <Transition appear show={isOpen} as={Fragment}>
       <Dialog as="div" className="relative z-50" onClose={onClose}>
@@ -26,7 +30,12 @@ export default function ProjectDetailModal({ isOpen, onClose, project }: Project
               {project.projectImage && <img src={project.projectImage} alt={project.name} className="w-full h-72 object-cover rounded-t-2xl"/>}
               
               <div className="p-8">
-                <span className="text-sm font-bold text-blue-600 uppercase">{project.category.name}</span>
+                <div className="flex items-center gap-3">
+                    <span className="text-sm font-bold text-blue-600 uppercase">{project.category.name}</span>
+                    <span className={`text-xs font-bold px-2.5 py-1 rounded-full ${statusColor}`}>
+                        {statusText}
+                    </span>
+                </div>
                 <Dialog.Title as="h3" className="text-3xl font-bold text-slate-900 mt-1">{project.name}</Dialog.Title>
                 
                 <div className="grid md:grid-cols-3 gap-8 mt-6">

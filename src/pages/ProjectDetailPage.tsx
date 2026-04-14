@@ -43,6 +43,10 @@ export default function ProjectDetailPage() {
   const descriptionText = project.description || (project as any).longDescription || (project as any).shortDescription || "No description available.";
   const isDescriptionLong = descriptionText.length > 300;
 
+  const isCompleted = project.endDate ? new Date(project.endDate) < new Date() : false;
+  const statusText = isCompleted ? 'Completed' : 'In Progress';
+  const statusColor = isCompleted ? 'bg-emerald-100 text-emerald-800' : 'bg-amber-100 text-amber-800';
+
   return (
     <div className="bg-white dark:bg-black transition-colors duration-300 min-h-screen">
       <ScrollToTop />
@@ -50,7 +54,12 @@ export default function ProjectDetailPage() {
         <div className="container mx-auto px-6">
             <motion.div initial={{opacity: 0, y: 20}} animate={{opacity: 1, y: 0}} transition={{duration: 0.5}}>
                 <div className="text-center">
-                    <span className="text-sm font-bold text-blue-600 uppercase tracking-widest">{project.category.name}</span>
+                    <div className="flex justify-center items-center gap-3">
+                        <span className="text-sm font-bold text-blue-600 uppercase tracking-widest">{project.category.name}</span>
+                        <span className={`text-xs font-bold px-2.5 py-1 rounded-full ${statusColor}`}>
+                            {statusText}
+                        </span>
+                    </div>
                     <h1 className="text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white mt-2">{project.name}</h1>
                     <p className="text-slate-500 dark:text-neutral-400 mt-3 flex items-center justify-center gap-2">
                         <FiCalendar/>
