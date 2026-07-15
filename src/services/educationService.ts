@@ -28,11 +28,11 @@ const STATIC_EDUCATION: Education[] = [
   {
     "id": "2",
     "courseName": "HSC(XII)",
-    "description": "I completed my class 12 high school education at MBBS Junior College.",
+    "description": "I completed my class 12 high school education at MBBS Junior College with PCMB group.",
     "endDate": "2023-05-31",
-    "institutionLink": "https://mbbsjc.com/",
+    "institutionLink": "https://schools.org.in/ahmadnagar/27260509004/matoshri-bhagubai-bambare-science-jr-college.html",
     "institutionName": "MBBS Junior College",
-    "logo": "https://mbbsjc.com/wp-content/uploads/2025/05/cropped-WhatsApp-Image-2025-05-18-at-3.28.46-PM-300x232.jpeg",
+    "logo": "/mbbsjc_logo.png",
     "order": 2,
     "startDate": "2022-06-01",
     "type": "education"
