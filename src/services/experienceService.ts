@@ -5,6 +5,7 @@ interface Experience {
   role: string;
   companyName: string;
   companyLink?: string | null;
+  location?: string;
   startDate: string;
   endDate?: string | null;
   description: string;
@@ -17,30 +18,32 @@ interface Experience {
 const STATIC_EXPERIENCES: Experience[] = [
   {
      "id": "1",
-     "companyLink": "https://prodigyinfotech.dev/",
-     "companyName": "Prodigy InfoTech",
-     "description": "Worked as a Full Stack Developer Intern (MERN stack). Built a comprehensive Student Management System featuring secure JWT authentication, role-based access control, and seamless database interactions. Contributed to both frontend UI development in React and backend REST API integrations using Node.js and Express.",
-     "endDate": "2025-07-01",
-     "logo": "https://prodigyinfotech.dev/assets/images/logo/logo.svg",
+     "companyLink": "https://www.linkedin.com/company/learncraft-engineering-and-consultant/",
+     "companyName": "LearnCraft Engineering",
+     "location": "Pune, India",
+     "description": "• Developed a full-stack NGO platform using MERN stack to streamline volunteer management and operational workflows.\n• Implemented responsive frontend interfaces and integrated scalable REST APIs using React, Node.js, and Express.js.\n• Designed MongoDB database structures and implemented secure authentication with role-based access control.\n• Improved application performance through debugging, optimization, and maintaining clean Git version control practices.",
+     "endDate": "2026-07-31",
+     "logo": "/learncraft_logo.png",
      "order": 1,
-     "role": "Full Stack Developer Intern",
-     "skills": ["MongoDB", "Express", "React", "Node.js", "Authentication"],
-     "startDate": "2025-06-01",
-     "type": "experience",
-     "certificateLink": "https://drive.google.com/file/d/1l7kxe03zp8dJTRU5uIp19q4s0jkyQTNH/view?usp=sharing"
+     "role": "MERN Stack Developer Intern",
+     "skills": ["React", "Node.js", "Express.js", "MongoDB", "REST APIs", "Git"],
+     "startDate": "2026-03-01",
+     "type": "experience"
   },
   {
      "id": "2",
-     "companyLink": null,
-     "companyName": "Startup",
-     "description": "Currently engaged as an ongoing MERN Stack Developer Intern. Architecting and developing a full-stack website platform for a Non-Governmental Organization (NGO). The platform focuses on streamlining community operations, managing volunteer resources, and showcasing organizational impact effectively.",
-     "endDate": "2026-04-30",
-     "logo": "https://ui-avatars.com/api/?name=G&background=E2E8F0&color=475569&rounded=true&bold=true",
+     "companyLink": "https://prodigyinfotech.dev/",
+     "companyName": "Prodigy InfoTech",
+     "location": "Pune, India",
+     "description": "• Developed a Student Management System using MERN stack with secure JWT-based authentication and authorization.\n• Created responsive UI/UX components and enhanced frontend experience with optimized user interactions.\n• Managed MongoDB database operations and implemented efficient CRUD functionalities for application modules.\n• Improved code maintainability through debugging, testing, and collaborative GitHub development workflows.",
+     "endDate": "2025-07-31",
+     "logo": "https://prodigyinfotech.dev/assets/images/logo/logo.svg",
      "order": 2,
-     "role": "MERN Stack Developer Intern",
-     "skills": ["MongoDB", "Express", "React", "Node.js"],
-     "startDate": "2026-03-01",
-     "type": "experience"
+     "role": "Full Stack Developer Intern",
+     "skills": ["MERN Stack", "React", "Node.js", "Express.js", "MongoDB", "JWT", "GitHub"],
+     "startDate": "2025-06-01",
+     "type": "experience",
+     "certificateLink": "https://drive.google.com/file/d/1l7kxe03zp8dJTRU5uIp19q4s0jkyQTNH/view?usp=sharing"
   }
 ];
 

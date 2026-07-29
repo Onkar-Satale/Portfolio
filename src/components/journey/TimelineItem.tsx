@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FiExternalLink } from 'react-icons/fi';
+import { FiExternalLink, FiMapPin } from 'react-icons/fi';
 
 // Local Type Definition
 interface Skill {
@@ -16,6 +16,7 @@ interface TimelineItemData {
   courseName?: string;
   institutionName?: string;
   institutionLink?: string;
+  location?: string;
   grade?: string;
   startDate: string;
   endDate?: string | null;
@@ -47,7 +48,7 @@ export default function TimelineItem({ item, isLast }: TimelineItemProps) {
             <img
               src={item.logo}
               alt={isExperience ? item.companyName : item.institutionName}
-              className="w-10 h-10 object-contain hover:scale-110 transition-transform duration-300"
+              className="w-10 h-10 object-contain hover:scale-110 transition-transform duration-300 drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)] dark:drop-shadow-none"
             />
           )}
         </div>
@@ -63,30 +64,46 @@ export default function TimelineItem({ item, isLast }: TimelineItemProps) {
         {isExperience ? (
           <>
             <h3 className="text-lg md:text-xl font-bold text-slate-900 dark:text-white mt-1">{item.role}</h3>
-            <a
-              href={item.companyLink || '#'}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`inline-flex items-center gap-2 mt-1 font-semibold text-slate-600 dark:text-neutral-300 ${item.companyLink && 'hover:text-blue-600 transition-colors'
-                }`}
-            >
-              {item.companyName}
-              {item.companyLink && <FiExternalLink size={14} />}
-            </a>
+            <div>
+              <a
+                href={item.companyLink || '#'}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`inline-flex items-center gap-2 mt-1 font-semibold text-slate-600 dark:text-neutral-300 ${item.companyLink && 'hover:text-blue-600 transition-colors'
+                  }`}
+              >
+                {item.companyName}
+                {item.companyLink && <FiExternalLink size={14} />}
+              </a>
+              {item.location && (
+                <div className="flex items-center gap-1 mt-1 text-xs font-medium text-slate-500 dark:text-neutral-400">
+                  <FiMapPin size={12} className="text-blue-500" />
+                  <span>{item.location}</span>
+                </div>
+              )}
+            </div>
           </>
         ) : (
           <>
             <h3 className="text-lg md:text-xl font-bold text-slate-900 dark:text-white mt-1">{item.courseName}</h3>
-            <a
-              href={item.institutionLink || '#'}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`inline-flex items-center gap-2 mt-1 font-semibold text-slate-600 dark:text-neutral-300 ${item.institutionLink && 'hover:text-blue-600 transition-colors'
-                }`}
-            >
-              {item.institutionName}
-              {item.institutionLink && <FiExternalLink size={14} />}
-            </a>
+            <div>
+              <a
+                href={item.institutionLink || '#'}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`inline-flex items-center gap-2 mt-1 font-semibold text-slate-600 dark:text-neutral-300 ${item.institutionLink && 'hover:text-blue-600 transition-colors'
+                  }`}
+              >
+                {item.institutionName}
+                {item.institutionLink && <FiExternalLink size={14} />}
+              </a>
+              {item.location && (
+                <div className="flex items-center gap-1 mt-1 text-xs font-medium text-slate-500 dark:text-neutral-400">
+                  <FiMapPin size={12} className="text-blue-500" />
+                  <span>{item.location}</span>
+                </div>
+              )}
+            </div>
           </>
         )}
 

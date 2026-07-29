@@ -5,8 +5,10 @@ export interface SocialLink {
 }
 
 const STATIC_LINKS: SocialLink[] = [
-  { type: "github", url: "https://github.com/Onkar-Satale" }, // Preserved from package.json/original
-  { type: "linkedin", url: "https://linkedin.com/" } // Add your LinkedIn URL
+  { type: "github", url: "https://github.com/Onkar-Satale" },
+  { type: "linkedin", url: "https://linkedin.com/in/onkar-satale" },
+  { type: "email", url: "mailto:onkarsatale4@gmail.com" },
+  { type: "phone", url: "tel:+918446004736" }
 ];
 
 // ✅ Function to fetch links from API

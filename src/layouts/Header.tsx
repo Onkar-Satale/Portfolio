@@ -81,6 +81,9 @@ export default function Header() {
     { id: 'skills', label: 'Skills' },
     { id: 'projects', label: 'Projects' },
     { id: 'journey', label: 'Journey' },
+    { id: 'certifications', label: 'Certifications' },
+    { id: 'leadership', label: 'Leadership' },
+    { id: 'contact', label: 'Get in Touch' },
   ];
 
   return (
@@ -111,7 +114,7 @@ export default function Header() {
             </button>
             <div className="hidden md:block">
               <ActionButton href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}>
-                Contact Me
+                Get in Touch
               </ActionButton>
             </div>
             <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden text-slate-800 dark:text-neutral-200 z-50" aria-label="Toggle menu">

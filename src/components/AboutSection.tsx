@@ -209,7 +209,7 @@ export default function AboutSection({ about, links }: AboutSectionProps) {
                 <FiMail className="mr-2" /> Get In Touch
               </ActionButton>
               {about.cv && (
-                <ActionButton href={about.cv} variant="outline" isExternal={true}>
+                <ActionButton href={about.cv} variant="outline" isExternal={true} download="Onkar_Satale_Resume.pdf">
                   <FiDownload className="mr-2" /> Resume
                 </ActionButton>
               )}

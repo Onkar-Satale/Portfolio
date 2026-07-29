@@ -6,7 +6,8 @@ interface ActionButtonProps {
   variant?: 'primary' | 'outline';
   children: ReactNode;
   isExternal?: boolean;
-  onClick?: () => void;
+  download?: string | boolean;
+  onClick?: (e?: any) => void;
   className?: string;
 }
 
@@ -15,6 +16,7 @@ export default function ActionButton({
   variant = 'primary', 
   children, 
   isExternal = false, 
+  download,
   onClick, 
   className = '' 
 }: ActionButtonProps) {
@@ -34,6 +36,7 @@ export default function ActionButton({
         href={href}
         target={isExternal ? '_blank' : '_self'}
         rel={isExternal ? 'noopener noreferrer' : ''}
+        download={download}
         className={fullClassName}
         whileHover={{ scale: 1.001 }}
         whileTap={{ scale: 0.95 }}

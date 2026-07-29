@@ -14,9 +14,12 @@ interface MobileMenuProps {
 
 export default function MobileMenu({ isOpen, onClose, scrollToSection, links }: MobileMenuProps) {
   const navLinks = [
-    { id: 'projects', label: 'Projects' },
     { id: 'skills', label: 'Skills' },
+    { id: 'projects', label: 'Projects' },
     { id: 'journey', label: 'Journey' },
+    { id: 'certifications', label: 'Certifications' },
+    { id: 'leadership', label: 'Leadership' },
+    { id: 'contact', label: 'Get in Touch' },
   ];
 
   const menuVariants = {
@@ -77,7 +80,7 @@ export default function MobileMenu({ isOpen, onClose, scrollToSection, links }: 
 
             <div className="flex-shrink-0 p-6 border-t border-slate-200 dark:border-neutral-800 space-y-6">
                 <button onClick={() => { scrollToSection('contact'); onClose(); }} className="w-full bg-blue-600 text-white text-center font-semibold px-5 py-3 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center gap-2">
-                    <FiMail /> Contact Me
+                    <FiMail /> Get in Touch
                 </button>
                 <div className="flex justify-center">
                     <SocialLinks links={links}/>

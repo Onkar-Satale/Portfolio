@@ -11,6 +11,7 @@ interface TimelineItemData {
   courseName?: string;
   institutionName?: string;
   institutionLink?: string;
+  location?: string;
   grade?: string;
   startDate: string;
   endDate?: string | null;

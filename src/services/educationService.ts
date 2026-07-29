@@ -7,6 +7,7 @@ interface Education {
   endDate?: string | null;
   institutionName: string;
   institutionLink?: string | null;
+  location?: string;
   logo?: string | null;
   type: 'education';
   order?: number; // optional, used for sorting
@@ -20,6 +21,7 @@ const STATIC_EDUCATION: Education[] = [
     "endDate": "2027-05-31",
     "institutionLink": "https://pict.edu/",
     "institutionName": "Pune Institute of Computer Technology",
+    "location": "Pune, Maharashtra",
     "logo": "https://img.collegepravesh.com/2017/02/PICT-Logo.jpg",
     "order": 1,
     "startDate": "2023-09-01",
@@ -27,11 +29,12 @@ const STATIC_EDUCATION: Education[] = [
   },
   {
     "id": "2",
-    "courseName": "HSC(XII)",
-    "description": "I completed my class 12 high school education at MBBS Junior College with PCMB group.",
+    "courseName": "Higher Secondary Certificate (HSC)",
+    "description": "Completed Class 12 Higher Secondary Certificate (HSC) in PCMB stream.",
     "endDate": "2023-05-31",
     "institutionLink": "https://schools.org.in/ahmadnagar/27260509004/matoshri-bhagubai-bambare-science-jr-college.html",
     "institutionName": "MBBS Junior College",
+    "location": "Ahilyanagar, Maharashtra",
     "logo": "/mbbsjc_logo.png",
     "order": 2,
     "startDate": "2022-06-01",
@@ -39,11 +42,12 @@ const STATIC_EDUCATION: Education[] = [
   },
   {
     "id": "3",
-    "courseName": "SSC(X)",
-    "description": "I completed my class 10 education at SBVNG School.",
+    "courseName": "Secondary School Certificate (SSC)",
+    "description": "Completed Class 10 Secondary School Certificate (SSC) education at SBVNG School.",
     "endDate": "2021-05-31",
     "institutionLink": "https://schools.org.in/ahmadnagar/27260412001/bhairavnath-vidyalaya-nimgoan-gangarda.html",
     "institutionName": "SBVNG School",
+    "location": "Ahilyanagar, Maharashtra",
     "logo": "https://schools.org.in/assets/images/favicon.png",
     "order": 3,
     "startDate": "2020-06-01",

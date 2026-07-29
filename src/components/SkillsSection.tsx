@@ -7,16 +7,21 @@ import Loader from './ui/Loader';
 import { useQuery } from '@tanstack/react-query';
 import {
   FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNodeJs,
-  FaGit, FaDocker
+  FaGit, FaDocker, FaBrain, FaDatabase, FaServer, FaNetworkWired, FaTools, FaCode
 } from 'react-icons/fa';
 import {
   SiTypescript, SiTailwindcss, SiBootstrap, SiExpress,
-  SiFirebase, SiMongodb, SiGithub, SiPostman, SiCanva,SiAngular,
+  SiFirebase, SiMongodb, SiGithub, SiPostman, SiCanva, SiAngular,
+  SiCplusplus, SiC, SiPython, SiMysql, SiOpenai
 } from 'react-icons/si';
+import { TbApi, TbCpu, TbBrandVscode } from 'react-icons/tb';
 import { getSkillCategories, type SkillCategory } from '../services/skillsService';
 
 // Map iconKey to React icon component
 const ICON_MAP: Record<string, JSX.Element> = {
+  cpp: <SiCplusplus className="text-blue-700 w-6 h-6" />,
+  c: <SiC className="text-blue-500 w-6 h-6" />,
+  python: <SiPython className="text-yellow-500 w-6 h-6" />,
   html: <FaHtml5 className="text-orange-500 w-6 h-6" />,
   css: <FaCss3Alt className="text-blue-600 w-6 h-6" />,
   js: <FaJsSquare className="text-yellow-400 w-6 h-6" />,
@@ -26,11 +31,28 @@ const ICON_MAP: Record<string, JSX.Element> = {
   tailwind: <SiTailwindcss className="text-teal-500 w-6 h-6" />,
   bootstrap: <SiBootstrap className="text-purple-600 w-6 h-6" />,
   node: <FaNodeJs className="text-green-600 w-6 h-6" />,
-  express: <SiExpress className="text-gray-800 w-6 h-6" />,
+  express: <SiExpress className="text-gray-800 dark:text-gray-200 w-6 h-6" />,
+  rest: <TbApi className="text-indigo-500 w-6 h-6" />,
+  llm: <FaBrain className="text-purple-500 w-6 h-6" />,
+  openai: <SiOpenai className="text-emerald-500 w-6 h-6" />,
+  groq: <FaBrain className="text-orange-500 w-6 h-6" />,
+  langchain: <FaBrain className="text-teal-500 w-6 h-6" />,
+  prompt: <FaBrain className="text-amber-500 w-6 h-6" />,
+  rag: <FaBrain className="text-sky-500 w-6 h-6" />,
+  agents: <FaBrain className="text-rose-500 w-6 h-6" />,
+  chromadb: <FaDatabase className="text-violet-500 w-6 h-6" />,
   firebase: <SiFirebase className="text-yellow-500 w-6 h-6" />,
   mongodb: <SiMongodb className="text-green-700 w-6 h-6" />,
+  mysql: <SiMysql className="text-blue-600 w-6 h-6" />,
+  dsa: <FaCode className="text-cyan-500 w-6 h-6" />,
+  oop: <FaCode className="text-indigo-500 w-6 h-6" />,
+  dbms: <FaDatabase className="text-emerald-600 w-6 h-6" />,
+  os: <TbCpu className="text-slate-600 dark:text-slate-300 w-6 h-6" />,
+  cn: <FaNetworkWired className="text-blue-500 w-6 h-6" />,
+  'system-design': <FaServer className="text-purple-600 w-6 h-6" />,
   git: <FaGit className="text-red-500 w-6 h-6" />,
-  github: <SiGithub className="text-gray-800 w-6 h-6" />,
+  github: <SiGithub className="text-gray-800 dark:text-gray-200 w-6 h-6" />,
+  vscode: <TbBrandVscode className="text-blue-500 w-6 h-6" />,
   postman: <SiPostman className="text-orange-400 w-6 h-6" />,
   canva: <SiCanva className="text-blue-400 w-6 h-6" />,
   docker: <FaDocker className="text-sky-500 w-6 h-6" />,

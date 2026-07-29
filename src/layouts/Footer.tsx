@@ -37,7 +37,7 @@ export default function Footer() {
                             <span className="text-lg font-bold text-slate-800 dark:text-white">MyMind</span>
                         </Link>
                         <p className="text-xs text-slate-500 dark:text-neutral-400">
-                            &copy; {currentYear} Satale Onkar K. All Rights Reserved.
+                            &copy; {currentYear} Onkar Satale. All Rights Reserved.
                         </p>
                     </div>
 
@@ -63,14 +63,6 @@ export default function Footer() {
                                 <FaLinkedin size={20} />
                             </a>
                         )}
-
-                        {/* Terms & Conditions */}
-                        <Link
-                            to="/terms"
-                            className="text-sm text-slate-500 dark:text-neutral-400 hover:text-blue-600 hover:underline transition-colors"
-                        >
-                            Terms & Conditions
-                        </Link>
 
                         {/* Scroll to top button */}
                         <button

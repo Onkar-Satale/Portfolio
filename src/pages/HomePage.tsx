@@ -3,8 +3,9 @@ import AboutSection from '../components/AboutSection';
 import SkillsSection from '../components/SkillsSection';
 import JourneySection from '../components/JourneySection';
 import FeaturedProjectsSection from '../components/FeaturedProjectsSection';
+import CertificationsSection from '../components/CertificationsSection';
+import LeadershipSection from '../components/LeadershipSection';
 import ContactSection from '../components/ContactSection';
-import Terms from "../components/terms";
 
 import { getAboutData, type AboutData } from '../services/aboutService';
 import { getLinks, type SocialLink } from '../services/linksService';
@@ -45,6 +46,8 @@ export default function HomePage() {
       <SkillsSection />
       <FeaturedProjectsSection />
       <JourneySection />
+      <CertificationsSection />
+      <LeadershipSection />
       <ContactSection />
     </>
   );

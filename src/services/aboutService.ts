@@ -7,15 +7,15 @@ export interface AboutData {
 }
 
 const STATIC_ABOUT: AboutData = {
-  "cv": "https://drive.google.com/file/d/1InpsO4j8zaC6o5ySkuUdhMM_xX4aeRDL/view?usp=sharing",
-  "description": "I build robust and scalable web applications from front to back. As a Full-Stack Developer and React specialist, I create seamless user experiences and efficient backend systems. I am also deeply interested in Agentic and Generative AI, building intelligent applications powered by large language models. I enjoy solving complex problems, turning challenges into elegant solutions, and bringing ideas to life in the digital world.",
+  "cv": "/Onkar_Satale_Resume.pdf",
+  "description": "I build robust, scalable web applications and AI-driven platforms. As a Full-Stack MERN Developer and Generative AI enthusiast, I specialize in building responsive frontend user interfaces, secure REST APIs, scalable database architectures, and intelligent LLM-powered applications. Passionate about solving complex software engineering challenges and maintaining clean code practices.",
   "image": "",
-  "name": "Satale Onkar K",
+  "name": "Onkar Satale",
   "roles": [
-    "Full-Stack Developer",
-    "Problem Solver",
-    "React Developer",
-    "GenAI Enthusiast"
+    "MERN Stack Developer",
+    "Full Stack Developer",
+    "Generative AI Enthusiast",
+    "Problem Solver"
   ]
 };
 
