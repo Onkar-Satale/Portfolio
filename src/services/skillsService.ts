@@ -25,25 +25,32 @@ const STATIC_SKILLS: SkillCategory[] = [
     ]
   },
   {
-    "id": "webdev",
-    "name": "Web Development",
+    "id": "frontend",
+    "name": "Frontend Development",
     "order": 2,
     "skills": [
       { "iconKey": "html", "id": "html", "image": "", "name": "HTML" },
       { "iconKey": "css", "id": "css", "image": "", "name": "CSS" },
       { "iconKey": "js", "id": "js", "image": "", "name": "JavaScript" },
       { "iconKey": "react", "id": "react", "image": "", "name": "React.js" },
+      { "iconKey": "tailwind", "id": "tailwind", "image": "", "name": "Tailwind CSS" },
+      { "iconKey": "bootstrap", "id": "bootstrap", "image": "", "name": "Bootstrap" }
+    ]
+  },
+  {
+    "id": "backend",
+    "name": "Backend Development",
+    "order": 3,
+    "skills": [
       { "iconKey": "node", "id": "node", "image": "", "name": "Node.js" },
       { "iconKey": "express", "id": "express", "image": "", "name": "Express.js" },
-      { "iconKey": "tailwind", "id": "tailwind", "image": "", "name": "Tailwind CSS" },
-      { "iconKey": "bootstrap", "id": "bootstrap", "image": "", "name": "Bootstrap" },
       { "iconKey": "rest", "id": "rest", "image": "", "name": "REST APIs" }
     ]
   },
   {
     "id": "genai",
-    "name": "Generative AI",
-    "order": 3,
+    "name": "Generative & Agentic AI",
+    "order": 4,
     "skills": [
       { "iconKey": "llm", "id": "llm", "image": "", "name": "LLMs" },
       { "iconKey": "openai", "id": "openai", "image": "https://upload.wikimedia.org/wikipedia/commons/4/4d/OpenAI_Logo.svg", "name": "OpenAI API" },
@@ -58,7 +65,7 @@ const STATIC_SKILLS: SkillCategory[] = [
   {
     "id": "databases",
     "name": "Databases",
-    "order": 4,
+    "order": 5,
     "skills": [
       { "iconKey": "mongodb", "id": "mongodb", "image": "", "name": "MongoDB" },
       { "iconKey": "mysql", "id": "mysql", "image": "", "name": "MySQL" }
@@ -67,7 +74,7 @@ const STATIC_SKILLS: SkillCategory[] = [
   {
     "id": "corecs",
     "name": "Core CS Concepts",
-    "order": 5,
+    "order": 6,
     "skills": [
       { "iconKey": "dsa", "id": "dsa", "image": "", "name": "Data Structures & Algorithms (DSA)" },
       { "iconKey": "oop", "id": "oop", "image": "", "name": "Object-Oriented Programming (OOP)" },
@@ -80,7 +87,7 @@ const STATIC_SKILLS: SkillCategory[] = [
   {
     "id": "tools",
     "name": "Tools & Platforms",
-    "order": 6,
+    "order": 7,
     "skills": [
       { "iconKey": "git", "id": "git", "image": "", "name": "Git" },
       { "iconKey": "github", "id": "github", "image": "", "name": "GitHub" },
