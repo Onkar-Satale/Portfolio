@@ -83,7 +83,6 @@ export default function Header() {
     { id: 'journey', label: 'Journey' },
     { id: 'certifications', label: 'Certifications' },
     { id: 'leadership', label: 'Leadership' },
-    { id: 'contact', label: 'Get in Touch' },
   ];
 
   return (
