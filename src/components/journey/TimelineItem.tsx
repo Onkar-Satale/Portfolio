@@ -77,7 +77,7 @@ export default function TimelineItem({ item, isLast }: TimelineItemProps) {
               </a>
               {item.location && (
                 <div className="flex items-center gap-1 mt-1 text-xs font-medium text-slate-500 dark:text-neutral-400">
-                  <FiMapPin size={12} className="text-blue-500" />
+                  <FiMapPin size={12} className="text-blue-600" />
                   <span>{item.location}</span>
                 </div>
               )}
@@ -99,7 +99,7 @@ export default function TimelineItem({ item, isLast }: TimelineItemProps) {
               </a>
               {item.location && (
                 <div className="flex items-center gap-1 mt-1 text-xs font-medium text-slate-500 dark:text-neutral-400">
-                  <FiMapPin size={12} className="text-blue-500" />
+                  <FiMapPin size={12} className="text-blue-600" />
                   <span>{item.location}</span>
                 </div>
               )}

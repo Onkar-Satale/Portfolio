@@ -70,7 +70,7 @@ export default function MobileMenu({ isOpen, onClose, scrollToSection, links }: 
                   animate="visible"
                   transition={{ delay: 0.1 + i * 0.05 }}
                   onClick={() => { scrollToSection(link.id); onClose(); }} 
-                  className="text-left font-semibold text-slate-800 dark:text-neutral-200 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                  className="text-left font-semibold text-slate-800 dark:text-neutral-200 hover:text-blue-600 dark:hover:text-blue-600 transition-colors"
                 >
                   {link.label}
                 </motion.button>

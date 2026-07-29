@@ -41,14 +41,14 @@ export default function LeadershipSection() {
                 className="bg-white dark:bg-neutral-900/90 border border-slate-200 dark:border-neutral-800 rounded-2xl p-6 hover:shadow-xl transition-all duration-300"
               >
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="p-3 bg-indigo-100 dark:bg-indigo-900/40 text-indigo-600 dark:text-indigo-400 rounded-xl">
+                  <div className="p-3 bg-blue-100 dark:bg-blue-900/40 text-blue-600 dark:text-blue-600 rounded-xl">
                     <FiUsers size={24} />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-slate-900 dark:text-white">
                       {item.role}
                     </h3>
-                    <p className="text-xs font-semibold text-indigo-600 dark:text-indigo-400 tracking-wide uppercase">
+                    <p className="text-xs font-semibold text-blue-600 dark:text-blue-600 tracking-wide uppercase">
                       {item.organization}
                     </p>
                   </div>
@@ -61,7 +61,7 @@ export default function LeadershipSection() {
                 <ul className="space-y-2">
                   {item.highlights.map((highlight, idx) => (
                     <li key={idx} className="flex items-start gap-2 text-xs text-slate-600 dark:text-neutral-400">
-                      <FiCheckCircle className="text-indigo-500 mt-0.5 flex-shrink-0" size={14} />
+                      <FiCheckCircle className="text-blue-600 mt-0.5 flex-shrink-0" size={14} />
                       <span>{highlight}</span>
                     </li>
                   ))}

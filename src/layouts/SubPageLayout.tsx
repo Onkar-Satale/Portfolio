@@ -11,7 +11,7 @@ export default function SubPageLayout() {
         <div className="container mx-auto px-6 py-4">
           <button 
             onClick={() => navigate(-1)} // This programmatically goes to the previous page
-            className="font-semibold text-slate-600 dark:text-neutral-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors inline-flex items-center gap-2 cursor-pointer"
+            className="font-semibold text-slate-600 dark:text-neutral-300 hover:text-blue-600 dark:hover:text-blue-600 transition-colors inline-flex items-center gap-2 cursor-pointer"
           >
             <FiArrowLeft />
             Back

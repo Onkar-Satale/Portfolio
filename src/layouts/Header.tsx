@@ -100,7 +100,7 @@ export default function Header() {
           </Link>
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map(link => (
-              <button key={link.id} onClick={() => scrollToSection(link.id)} className="font-semibold text-slate-600 dark:text-neutral-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">{link.label}</button>
+              <button key={link.id} onClick={() => scrollToSection(link.id)} className="font-semibold text-slate-600 dark:text-neutral-300 hover:text-blue-600 dark:hover:text-blue-600 transition-colors">{link.label}</button>
             ))}
           </div>
           <div className="flex items-center gap-4">

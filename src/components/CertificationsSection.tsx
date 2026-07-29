@@ -42,11 +42,11 @@ export default function CertificationsSection() {
               >
                 <div>
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="p-3 bg-blue-100 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400 rounded-xl">
+                    <div className="p-3 bg-blue-100 dark:bg-blue-900/40 text-blue-600 dark:text-blue-600 rounded-xl">
                       <FiAward size={24} />
                     </div>
                     <div>
-                      <span className="text-xs font-semibold text-blue-600 dark:text-blue-400 tracking-wider uppercase">
+                      <span className="text-xs font-semibold text-blue-600 dark:text-blue-600 tracking-wider uppercase">
                         {cert.issuer} • {cert.platform}
                       </span>
                       <h3 className="text-xl font-bold text-slate-900 dark:text-white mt-0.5">
@@ -66,7 +66,7 @@ export default function CertificationsSection() {
                           key={skill}
                           className="inline-flex items-center gap-1 text-xs font-medium px-2.5 py-1 rounded-full bg-slate-200/70 dark:bg-neutral-800 text-slate-700 dark:text-neutral-300"
                         >
-                          <FiCheckCircle size={12} className="text-blue-500" />
+                          <FiCheckCircle size={12} className="text-blue-600" />
                           {skill}
                         </span>
                       ))}
