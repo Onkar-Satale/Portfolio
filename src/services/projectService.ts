@@ -110,8 +110,8 @@ const STATIC_PROJECTS: Project[] = [
     projectImage: "https://images.unsplash.com/photo-1513258496099-48168024aec0?w=800&q=80",
     tags: ["React", "Node.js", "Express.js", "SQL", "REST APIs"],
     members: [],
-    liveLink: "https://academic-engagement-portal-q9rw.vercel.app/",
-    githubLink: "https://github.com/Onkar-Satale/Academic-Engagement-Portal",
+    liveLink: "https://academic-engagement-portal-kappa.vercel.app/",
+    githubLink: "https://github.com/Onkar-Satale/Academic_Engagement_Portal",
     featured: true,
     startDate: "2026-01-01",
     endDate: "2026-02-10"
