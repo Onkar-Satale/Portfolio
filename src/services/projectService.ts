@@ -268,7 +268,7 @@ A modern, fully responsive personal portfolio web application built using <stron
   <li>Visitor analytics dashboard with interactive performance metrics</li>
   <li>Progressive Web App (PWA) offline support</li>
 </ul>`,
-    projectImage: "/social-preview.png",
+    projectImage: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80",
     tags: ["React 19", "TypeScript", "Vite", "Tailwind CSS", "Framer Motion", "Web3Forms API", "Web App"],
     members: [],
     liveLink: "https://portfolio-mu-one-n3zkisj3jp.vercel.app/",
