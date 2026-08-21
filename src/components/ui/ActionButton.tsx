@@ -20,11 +20,11 @@ export default function ActionButton({
   onClick, 
   className = '' 
 }: ActionButtonProps) {
-  const baseClasses = "cursor-pointer font-semibold px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center text-base shadow-lg";
+  const baseClasses = "cursor-pointer font-semibold px-6 py-2.5 rounded-lg transition-colors duration-200 flex items-center justify-center text-base";
   
   const styles = {
-    primary: 'bg-blue-600 text-white hover:bg-blue-700 hover:shadow-blue-500/40',
-    outline: 'bg-white dark:bg-transparent text-slate-700 dark:text-neutral-200 border border-slate-200 dark:border-neutral-700 hover:border-slate-300 dark:hover:border-neutral-600 hover:bg-slate-50 dark:hover:bg-neutral-900 hover:shadow-slate-200/50 dark:hover:shadow-none'
+    primary: 'bg-blue-600 text-white hover:bg-blue-700',
+    outline: 'bg-white dark:bg-transparent text-slate-700 dark:text-neutral-200 border border-slate-200 dark:border-neutral-700 hover:border-slate-300 dark:hover:border-neutral-600 hover:bg-slate-50 dark:hover:bg-neutral-900'
   };
 
   const fullClassName = `${baseClasses} ${styles[variant]} ${className}`;
@@ -32,30 +32,26 @@ export default function ActionButton({
   // If an href is provided, render a link
   if (href) {
     return (
-      <motion.a
+      <a
         href={href}
         target={isExternal ? '_blank' : '_self'}
         rel={isExternal ? 'noopener noreferrer' : ''}
         download={download}
         className={fullClassName}
-        whileHover={{ scale: 1.001 }}
-        whileTap={{ scale: 0.95 }}
         onClick={onClick}
       >
         {children}
-      </motion.a>
+      </a>
     );
   }
 
   // Otherwise, render a button
   return (
-    <motion.button
+    <button
       onClick={onClick}
       className={fullClassName}
-      whileHover={{ scale: 1.001 }}
-      whileTap={{ scale: 0.95 }}
     >
       {children}
-    </motion.button>
+    </button>
   );
 }
