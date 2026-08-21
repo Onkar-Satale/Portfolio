@@ -20,7 +20,7 @@ export default function ActionButton({
   onClick, 
   className = '' 
 }: ActionButtonProps) {
-  const baseClasses = "cursor-pointer font-semibold px-6 py-2.5 rounded-lg transition-colors duration-200 flex items-center justify-center text-base";
+  const baseClasses = "cursor-pointer font-semibold px-6 py-2.5 rounded-lg transition-all duration-200 transform hover:scale-105 active:scale-95 flex items-center justify-center text-base";
   
   const styles = {
     primary: 'bg-blue-600 text-white hover:bg-blue-700',

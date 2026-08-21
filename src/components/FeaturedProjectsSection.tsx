@@ -52,7 +52,7 @@ export default function FeaturedProjectsSection() {
         </div>
 
         <div className="mt-16 text-center">
-            <Link to="/projects" className="font-semibold text-slate-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-600 transition-colors">
+            <Link to="/projects" className="font-semibold text-slate-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-600 transition-all duration-200 inline-block transform hover:scale-105 active:scale-95">
                 View All Projects &rarr;
             </Link>
         </div>

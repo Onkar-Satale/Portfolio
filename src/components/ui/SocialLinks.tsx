@@ -13,7 +13,7 @@ interface SocialLinksProps {
 }
 
 export default function SocialLinks({ links }: SocialLinksProps) {
-  const linkStyle = "text-slate-400 hover:text-gray-700 transition-colors duration-300";
+  const linkStyle = "text-slate-400 hover:text-blue-600 dark:hover:text-white transition-all duration-200 transform hover:scale-125 inline-block";
   
   return (
     <div className="flex items-center gap-6">

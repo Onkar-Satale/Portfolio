@@ -160,57 +160,54 @@ The Shivmala Foundation website serves as the central digital platform for the N
   },
   {
     id: "portfolio-website",
-    name: "Portfolio Website",
+    name: "Portfolio Website – Developer Showcase",
     category: { id: "webapp", name: "Web App" },
-    shortDescription: "A modern, portfolio web application built using React, Tailwind CSS, Typescript, Web3forms API.",
-    longDescription: `
-<h3>About the Project</h3>
+    shortDescription: "A modern, high-performance personal portfolio web application built using React, TypeScript, Tailwind CSS, and Web3Forms API to showcase full-stack projects and technical skills.",
+    longDescription: `<h3>About the Project</h3>
 <p>
-A modern and fully responsive personal portfolio web application built using React, TypeScript, Vite, and Tailwind CSS. The application is designed to showcase my technical skills, projects, and experience through a clean, interactive, and user-friendly interface. It emphasizes performance, scalability, and smooth user experience while maintaining a professional and visually appealing design.
+A modern, fully responsive personal portfolio web application built using <strong>React, TypeScript, Vite, and Tailwind CSS</strong>. This project showcases my technical skills, software engineering projects, and academic/professional journey through a dynamic, interactive, and visually stunning user interface.
 </p>
 
 <br/>
 
 <h3>Key Features</h3>
 <ul>
-<li><strong>Responsive Modern UI:</strong> Fully responsive layout optimized for desktop, tablet, and mobile devices with a clean and structured design system.</li>
-<li><strong>Light/Dark Mode Toggle:</strong> Seamless theme switching with persistent state for improved user experience.</li>
-<li><strong>Dynamic Project Showcase:</strong> Structured project section displaying detailed information, technologies used, and live/demo links.</li>
-<li><strong>Contact Form Integration:</strong> Functional contact form integrated with Web3Forms API for real-time message handling without a custom backend.</li>
-<li><strong>Skills & Timeline Section:</strong> Dedicated sections to highlight technical skills, tools, and academic/professional journey in a clear visual format.</li>
-<li><strong>Reusable Component Architecture:</strong> Modular and scalable component-based structure for maintainability and code reusability.</li>
-<li><strong>Toast Notification System:</strong> User feedback system for actions such as form submission and interactions.</li>
-<li><strong>Optimized Performance:</strong> Fast loading and smooth transitions powered by Vite build tooling.</li>
+  <li><strong>Fully Responsive Modern UI:</strong> Clean layout optimized for mobile, tablet, and desktop screens with seamless navigation.</li>
+  <li><strong>Dark / Light Mode Support:</strong> Seamless theme switching with persistent user preference storage.</li>
+  <li><strong>Dynamic Project Showcase:</strong> Detailed case study views with live demo links, source code repositories, and technology breakdowns.</li>
+  <li><strong>Interactive Contact System:</strong> Integrated contact form powered by Web3Forms API with real-time submission feedback.</li>
+  <li><strong>Skills & Journey Timeline:</strong> Categorized technology pills and an interactive dual-tab (Experience & Education) timeline with smooth hover switching.</li>
+  <li><strong>Modern Typography & Micro-Animations:</strong> Space Grotesk headings, interactive cursor spotlight glow, and scroll progress tracking.</li>
+  <li><strong>Toast Notifications:</strong> Theme-aware toast feedback for actions such as message submission.</li>
+  <li><strong>Optimized Performance:</strong> Lightning-fast build tooling and page loads powered by Vite.</li>
 </ul>
 
 <br/>
 
 <h3>Tech Stack</h3>
 <ul>
-<li><strong>Frontend:</strong> React.js (with TypeScript)</li>
-<li><strong>Build Tool:</strong> Vite</li>
-<li><strong>Styling:</strong> Tailwind CSS</li>
-<li><strong>API Integration:</strong> Web3Forms (Contact Form)</li>
+  <li><strong>Frontend:</strong> React 19, TypeScript, Framer Motion</li>
+  <li><strong>Styling:</strong> Tailwind CSS 4, Vanilla CSS Keyframes</li>
+  <li><strong>Build Tool:</strong> Vite</li>
+  <li><strong>API & Services:</strong> Web3Forms API, React Hot Toast, TanStack React Query</li>
 </ul>
 
 <br/>
 
-<h3>Highlights</h3>
+<h3>Future Roadmap</h3>
 <ul>
-<li>Clean and scalable frontend architecture</li>
-<li>Strong focus on UI/UX and accessibility</li>
-<li>Real-world portfolio use case for personal branding</li>
-<li>No backend dependency – fully functional frontend integration</li>
-</ul>
-`,
-    projectImage: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80",
-    tags: ["React", "TypeScript", "Vite", "Tailwind CSS", "Web3forms API", "Web App"],
+  <li>AI Chatbot Assistant integration for instant interactive inquiries</li>
+  <li>Visitor analytics dashboard with interactive performance metrics</li>
+  <li>Progressive Web App (PWA) offline support</li>
+</ul>`,
+    projectImage: "/social-preview.png",
+    tags: ["React 19", "TypeScript", "Vite", "Tailwind CSS", "Framer Motion", "Web3Forms API", "Web App"],
     members: [],
     liveLink: "https://portfolio-mu-one-n3zkisj3jp.vercel.app/",
     githubLink: "https://github.com/Onkar-Satale/Portfolio",
     featured: false,
     startDate: "2025-06-01",
-    endDate: "2025-12-15"
+    endDate: "2026-02-22"
   },
   {
     id: "mcu-doomsday-clock",

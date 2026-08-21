@@ -106,7 +106,7 @@ export default function Header() {
           <div className="flex items-center gap-4">
             <button 
               onClick={() => setIsDarkMode(!isDarkMode)} 
-              className="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-neutral-900 text-slate-800 dark:text-neutral-200 transition-colors"
+              className="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-neutral-900 text-slate-800 dark:text-neutral-200 transition-all duration-200 transform hover:scale-110 active:scale-95"
               aria-label="Toggle Dark Mode"
             >
               {isDarkMode ? <FiSun size={20} /> : <FiMoon size={20} />}
