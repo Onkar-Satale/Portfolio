@@ -177,7 +177,11 @@ export default function AboutSection({ about, links }: AboutSectionProps) {
   }, [about.roles]);
 
   return (
-    <section id="about" className="min-h-screen flex items-center pb-16 md:pb-24 lg:px-16 bg-slate-100/70 dark:bg-transparent transition-colors duration-300">
+    <section id="about" className="relative min-h-screen flex items-center pb-16 md:pb-24 lg:px-16 bg-slate-100/70 dark:bg-transparent transition-colors duration-300 overflow-hidden">
+      {/* Ambient Cosmic Background Aura */}
+      <div className="absolute top-1/3 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[450px] h-[450px] bg-blue-500/10 dark:bg-blue-600/15 rounded-full blur-3xl pointer-events-none -z-10 animate-pulse" style={{ animationDuration: '7s' }} />
+      <div className="absolute top-1/2 right-1/4 w-[350px] h-[350px] bg-indigo-500/10 dark:bg-indigo-600/15 rounded-full blur-3xl pointer-events-none -z-10 animate-pulse" style={{ animationDuration: '9s' }} />
+
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Text Column */}
@@ -224,7 +228,7 @@ export default function AboutSection({ about, links }: AboutSectionProps) {
             transition={{ duration: 0.8, ease: [0, 0.71, 0.2, 1.01] }}
             className="w-full max-w-sm mx-auto order-1 md:order-2"
           >
-            <div className="relative p-2 rounded-full border-2 border-slate-200 dark:border-neutral-800">
+            <div className="relative p-2 rounded-full border-2 border-slate-200 dark:border-neutral-800 shadow-2xl dark:shadow-blue-500/10">
               {about.image ? (
                 <img src={about.image} alt={about.name} className="w-full rounded-full aspect-square object-cover" />
               ) : (

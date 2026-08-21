@@ -37,7 +37,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
     return (
         <motion.div variants={itemVariants} className="group relative h-full">
             {/* The main card content - NOT a link itself */}
-            <div className="bg-white dark:bg-neutral-900 rounded-xl shadow-sm flex flex-col h-full border border-transparent transition-all duration-300 group-hover:shadow-lg group-hover:border-blue-500/50">
+            <div className="bg-white dark:bg-neutral-900 rounded-xl shadow-sm flex flex-col h-full border border-slate-200/80 dark:border-neutral-800 transition-all duration-300 group-hover:-translate-y-1.5 group-hover:shadow-xl group-hover:shadow-blue-500/10 group-hover:border-blue-500/50">
                 {project.projectImage && (
                     <div className="aspect-video w-full overflow-hidden rounded-t-xl bg-slate-100 dark:bg-neutral-800">
                         <img 
