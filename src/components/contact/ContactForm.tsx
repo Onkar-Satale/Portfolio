@@ -56,7 +56,7 @@ export default function ContactForm() {
             <input
               {...field}
               placeholder="Your Name"
-              className="w-full px-4 py-3 border-none rounded-lg bg-slate-100 dark:bg-black text-slate-900 dark:text-neutral-300 placeholder-slate-500 dark:placeholder-neutral-500 focus:outline-none focus:ring-0 transition-colors duration-200 dark:[&:-webkit-autofill]:[box-shadow:0_0_0_1000px_#000000_inset_!important] dark:[&:-webkit-autofill]:[-webkit-text-fill-color:#d4d4d4_!important]"
+              className="w-full px-4 py-3 appearance-none border-0 outline-none ring-0 shadow-none bg-slate-100 dark:bg-black text-slate-900 dark:text-neutral-300 placeholder-slate-500 dark:placeholder-neutral-500 focus:outline-none focus:ring-0 focus:shadow-none transition-colors duration-200"
             />
           )}
         />
@@ -69,7 +69,7 @@ export default function ContactForm() {
               {...field}
               type="email"
               placeholder="Your Email"
-              className="w-full px-4 py-3 border-none rounded-lg bg-slate-100 dark:bg-black text-slate-900 dark:text-neutral-300 placeholder-slate-500 dark:placeholder-neutral-500 focus:outline-none focus:ring-0 transition-colors duration-200 dark:[&:-webkit-autofill]:[box-shadow:0_0_0_1000px_#000000_inset_!important] dark:[&:-webkit-autofill]:[-webkit-text-fill-color:#d4d4d4_!important]"
+              className="w-full px-4 py-3 appearance-none border-0 outline-none ring-0 shadow-none bg-slate-100 dark:bg-black text-slate-900 dark:text-neutral-300 placeholder-slate-500 dark:placeholder-neutral-500 focus:outline-none focus:ring-0 focus:shadow-none transition-colors duration-200"
             />
           )}
         />
@@ -81,7 +81,7 @@ export default function ContactForm() {
             <input
               {...field}
               placeholder="Subject"
-              className="w-full px-4 py-3 border-none rounded-lg bg-slate-100 dark:bg-black text-slate-900 dark:text-neutral-300 placeholder-slate-500 dark:placeholder-neutral-500 focus:outline-none focus:ring-0 transition-colors duration-200 dark:[&:-webkit-autofill]:[box-shadow:0_0_0_1000px_#000000_inset_!important] dark:[&:-webkit-autofill]:[-webkit-text-fill-color:#d4d4d4_!important]"
+              className="w-full px-4 py-3 appearance-none border-0 outline-none ring-0 shadow-none bg-slate-100 dark:bg-black text-slate-900 dark:text-neutral-300 placeholder-slate-500 dark:placeholder-neutral-500 focus:outline-none focus:ring-0 focus:shadow-none transition-colors duration-200"
             />
           )}
         />
@@ -94,7 +94,7 @@ export default function ContactForm() {
               {...field}
               placeholder="Your message..."
               rows={4}
-              className="w-full px-4 py-3 border-none rounded-lg bg-slate-100 dark:bg-black text-slate-900 dark:text-neutral-300 placeholder-slate-500 dark:placeholder-neutral-500 focus:outline-none focus:ring-0 transition-colors duration-200 resize-none"
+              className="w-full px-4 py-3 appearance-none border-0 outline-none ring-0 shadow-none bg-slate-100 dark:bg-black text-slate-900 dark:text-neutral-300 placeholder-slate-500 dark:placeholder-neutral-500 focus:outline-none focus:ring-0 focus:shadow-none transition-colors duration-200 resize-none"
             />
           )}
         />
