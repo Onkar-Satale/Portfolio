@@ -29,21 +29,24 @@ export default function Header() {
       if (savedTheme) {
         return savedTheme === 'dark';
       }
-      // Default to light mode as requested by user
-      return false;
+      return document.documentElement.classList.contains('dark');
     }
-    return false;
+    return true;
   });
 
-  useEffect(() => {
-    if (isDarkMode) {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
-    }
-  }, [isDarkMode]);
+  const toggleDarkMode = () => {
+    setIsDarkMode(prev => {
+      const next = !prev;
+      if (next) {
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+      }
+      return next;
+    });
+  };
 
   const handleScroll = useCallback(() => {
     const yPos = window.scrollY;
@@ -105,8 +108,8 @@ export default function Header() {
           </div>
           <div className="flex items-center gap-4">
             <button 
-              onClick={() => setIsDarkMode(!isDarkMode)} 
-              className="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-neutral-900 text-slate-800 dark:text-neutral-200 transition-all duration-200 transform hover:scale-110 active:scale-95"
+              onClick={toggleDarkMode} 
+              className="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-neutral-900 text-slate-800 dark:text-neutral-200 transition-all duration-200 transform hover:scale-110 active:scale-95 cursor-pointer"
               aria-label="Toggle Dark Mode"
             >
               {isDarkMode ? <FiSun size={20} /> : <FiMoon size={20} />}

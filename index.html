@@ -22,6 +22,19 @@
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://sataleOnkar.me/">
+  <script>
+    (function () {
+      try {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'light') {
+          document.documentElement.classList.remove('dark');
+        } else {
+          // Default to dark mode or user-saved 'dark'
+          document.documentElement.classList.add('dark');
+        }
+      } catch (e) {}
+    })();
+  </script>
   <meta property="og:title" content="Satale Onkar K - Full-Stack Developer Portfolio">
   <meta property="og:description"
     content="Explore the projects and skills of Satale Onkar K, a developer focused on building high-performance web applications with React, Node.js.">
