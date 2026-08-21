@@ -87,7 +87,7 @@ export default function SkillsSection() {
   // Loading state
   if (isLoading) {
     return (
-      <section id="skills" className="py-20 md:py-28 border-y bg-slate-50 dark:bg-black border-slate-200 dark:border-neutral-800 transition-colors duration-300">
+      <section id="skills" className="py-20 md:py-28 bg-slate-50 dark:bg-black transition-colors duration-300">
         <div className="container mx-auto px-6 min-h-[20rem] flex items-center justify-center">
           <Loader />
         </div>
@@ -98,7 +98,7 @@ export default function SkillsSection() {
   // Error or empty fallback
   if (isError || categories.length === 0) {
     return (
-      <section id="skills" className="py-20 md:py-28 border-y bg-slate-50 dark:bg-black border-slate-200 dark:border-neutral-800 transition-colors duration-300">
+      <section id="skills" className="py-20 md:py-28 bg-slate-50 dark:bg-black transition-colors duration-300">
         <div className="container mx-auto px-6 text-center text-slate-600 dark:text-neutral-400">
           <h3 className="text-xl font-semibold mb-2 text-slate-800 dark:text-white">No skills found ⚠️</h3>
           <p>Check your Firebase “skills” collection or data format.</p>
@@ -110,7 +110,7 @@ export default function SkillsSection() {
   return (
     <motion.section
       id="skills"
-      className="py-20 md:py-28 border-y bg-slate-50 dark:bg-black border-slate-200 dark:border-neutral-800 transition-colors duration-300"
+      className="py-20 md:py-28 bg-slate-50 dark:bg-black transition-colors duration-300"
       onViewportEnter={() => setHasBeenInView(true)}
       viewport={{ once: true, amount: 0.2 }}
     >

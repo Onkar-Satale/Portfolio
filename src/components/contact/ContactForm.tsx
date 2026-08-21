@@ -47,36 +47,58 @@ export default function ContactForm() {
 
   return (
     <div className="text-center">
-      <p className="text-slate-500 text-sm mt-1">
-        Please fill out the form below to get in touch.
-      </p>
-
-      <form onSubmit={handleSubmit(onSubmit)} className="mt-6 space-y-4 max-w-lg mx-auto">
+      <form onSubmit={handleSubmit(onSubmit)} className="space-y-3 max-w-lg mx-auto">
         <Controller
           name="name"
           control={control}
           rules={{ required: true }}
-          render={({ field }) => <input {...field} placeholder="Your Name" className="w-full p-3 border border-slate-300 dark:border-neutral-700 rounded-lg bg-transparent text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-600 transition-colors duration-300 placeholder-slate-400 dark:placeholder-neutral-500 dark:[&:-webkit-autofill]:[box-shadow:0_0_0_1000px_#0a0a0a_inset_!important] dark:[&:-webkit-autofill]:[-webkit-text-fill-color:white_!important]" />}
+          render={({ field }) => (
+            <input
+              {...field}
+              placeholder="Your Name"
+              className="w-full px-4 py-3 border-none rounded-lg bg-slate-100 dark:bg-black text-slate-900 dark:text-neutral-300 placeholder-slate-500 dark:placeholder-neutral-500 focus:outline-none focus:ring-0 transition-colors duration-200 dark:[&:-webkit-autofill]:[box-shadow:0_0_0_1000px_#000000_inset_!important] dark:[&:-webkit-autofill]:[-webkit-text-fill-color:#d4d4d4_!important]"
+            />
+          )}
         />
         <Controller
           name="email"
           control={control}
           rules={{ required: true }}
-          render={({ field }) => <input {...field} type="email" placeholder="Your Email" className="w-full p-3 border border-slate-300 dark:border-neutral-700 rounded-lg bg-transparent text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-600 transition-colors duration-300 placeholder-slate-400 dark:placeholder-neutral-500 dark:[&:-webkit-autofill]:[box-shadow:0_0_0_1000px_#0a0a0a_inset_!important] dark:[&:-webkit-autofill]:[-webkit-text-fill-color:white_!important]" />}
+          render={({ field }) => (
+            <input
+              {...field}
+              type="email"
+              placeholder="Your Email"
+              className="w-full px-4 py-3 border-none rounded-lg bg-slate-100 dark:bg-black text-slate-900 dark:text-neutral-300 placeholder-slate-500 dark:placeholder-neutral-500 focus:outline-none focus:ring-0 transition-colors duration-200 dark:[&:-webkit-autofill]:[box-shadow:0_0_0_1000px_#000000_inset_!important] dark:[&:-webkit-autofill]:[-webkit-text-fill-color:#d4d4d4_!important]"
+            />
+          )}
         />
         <Controller
           name="subject"
           control={control}
           rules={{ required: true }}
-          render={({ field }) => <input {...field} placeholder="Subject" className="w-full p-3 border border-slate-300 dark:border-neutral-700 rounded-lg bg-transparent text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-600 transition-colors duration-300 placeholder-slate-400 dark:placeholder-neutral-500 dark:[&:-webkit-autofill]:[box-shadow:0_0_0_1000px_#0a0a0a_inset_!important] dark:[&:-webkit-autofill]:[-webkit-text-fill-color:white_!important]" />}
+          render={({ field }) => (
+            <input
+              {...field}
+              placeholder="Subject"
+              className="w-full px-4 py-3 border-none rounded-lg bg-slate-100 dark:bg-black text-slate-900 dark:text-neutral-300 placeholder-slate-500 dark:placeholder-neutral-500 focus:outline-none focus:ring-0 transition-colors duration-200 dark:[&:-webkit-autofill]:[box-shadow:0_0_0_1000px_#000000_inset_!important] dark:[&:-webkit-autofill]:[-webkit-text-fill-color:#d4d4d4_!important]"
+            />
+          )}
         />
         <Controller
           name="message"
           control={control}
           rules={{ required: true }}
-          render={({ field }) => <textarea {...field} placeholder="Your message..." rows={5} className="w-full p-3 border border-slate-300 dark:border-neutral-700 rounded-lg bg-transparent text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-600 transition-colors duration-300 placeholder-slate-400 dark:placeholder-neutral-500" />}
+          render={({ field }) => (
+            <textarea
+              {...field}
+              placeholder="Your message..."
+              rows={4}
+              className="w-full px-4 py-3 border-none rounded-lg bg-slate-100 dark:bg-black text-slate-900 dark:text-neutral-300 placeholder-slate-500 dark:placeholder-neutral-500 focus:outline-none focus:ring-0 transition-colors duration-200 resize-none"
+            />
+          )}
         />
-        <Button type="submit" isLoading={mutation.isPending} className="w-full !py-3">
+        <Button type="submit" isLoading={mutation.isPending} className="w-full !py-2.5">
           Send Message
         </Button>
       </form>

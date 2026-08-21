@@ -35,7 +35,7 @@ export default function JourneySection() {
   return (
     <motion.section
       id="journey"
-      className="py-20 md:py-28 bg-slate-50 dark:bg-black border-y border-slate-200 dark:border-neutral-800 transition-colors duration-300"
+      className="py-20 md:py-28 bg-slate-50 dark:bg-black transition-colors duration-300"
       onViewportEnter={() => setInView(true)}
       viewport={{ once: true, amount: 0.1 }}
     >

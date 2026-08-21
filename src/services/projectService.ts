@@ -121,7 +121,7 @@ const STATIC_PROJECTS: Project[] = [
     name: "Shivmala Foundation Platform",
     category: { id: "webapp", name: "Web App" },
     shortDescription: "A platform for Shivmala Foundation featuring a dynamic campaign showcase, automated media gallerie and videos.",
-longDescription: `
+    longDescription: `
 <h3>About the Project</h3>
 <p>
 The Shivmala Foundation website serves as the central digital platform for the NGO, designed to showcase social initiatives, campaigns, and community impact. The application focuses on delivering a visually engaging and user-friendly experience, allowing visitors to explore projects, view media content, and understand the foundation’s mission. Built using modern frontend technologies, the project emphasizes responsiveness, smooth interactions, and clean UI/UX design.
@@ -211,6 +211,59 @@ A modern and fully responsive personal portfolio web application built using Rea
     featured: false,
     startDate: "2025-06-01",
     endDate: "2025-12-15"
+  },
+  {
+    id: "mcu-doomsday-clock",
+    name: "MCU Doomsday Clock",
+    category: { id: "webapp", name: "Web App" },
+    shortDescription: "An immersive, cinematic countdown experience for Avengers: Doomsday featuring dynamic parallax lighting, canvas particle simulation, ambient multi-track audio, and the iconic 'Will Return' sequence.",
+    longDescription: `<h3>About the Project</h3>
+<p>
+An immersive, cinematic countdown web application built for <strong>Avengers: Doomsday</strong> (releasing on December 18, 2026). The project delivers a theatrical experience with interactive lighting, physics-based canvas particles, atmospheric god rays, multi-track ambient audio, and a customizable Marvel-style "Will Return" stinger sequence.
+</p>
+
+<br/>
+
+<h3>Key Features</h3>
+<ul>
+  <li><strong>Cinematic Countdown:</strong> Animated flip and shuffle digits counting down in real-time to Marvel Phase 6's monumental release.</li>
+  <li><strong>Dynamic Parallax Lighting:</strong> Mouse-reactive lighting with specular highlights, realistic depth shadows, and lens bloom effects.</li>
+  <li><strong>Atmospheric Visual Effects:</strong> Rotating god rays, ambient volumetric glow, and layered drifting fog with CSS blend modes.</li>
+  <li><strong>Interactive Particle Simulation:</strong> HTML5 canvas floating dust and ember particle system with customizable particle density for optimal performance.</li>
+  <li><strong>Multi-Track Ambient Audio:</strong> Integrated Web Audio engine with multi-track switcher (Avengers Theme, Clock Ticking, and Mute mode).</li>
+  <li><strong>"Will Return" Stinger Sequence:</strong> Authentic Marvel cinematic post-credits animation with custom name support via URL query parameters (e.g. <code>?name=Tony%20Stark</code>).</li>
+  <li><strong>Floating Utility Bar:</strong> Quick-access control dock for audio controls, particle counts, and UI toggles.</li>
+  <li><strong>Fully Responsive:</strong> Optimized for high-performance rendering across desktop, tablet, and mobile screens.</li>
+</ul>
+
+<br/>
+
+<h3>Tech Stack</h3>
+<ul>
+  <li><strong>Framework:</strong> Next.js 16 (App Router & Turbopack)</li>
+  <li><strong>UI Library:</strong> React 19</li>
+  <li><strong>Language:</strong> TypeScript</li>
+  <li><strong>Styling:</strong> Tailwind CSS 4 & Pure CSS Keyframes / Blend Modes</li>
+  <li><strong>Graphics & Audio:</strong> HTML5 Canvas Particle Engine & Web Audio API</li>
+</ul>
+
+<br/>
+
+<h3>Project Highlights</h3>
+<ul>
+  <li>Immersive cinematic UI/UX with smooth 60fps animations and GPU-accelerated effects</li>
+  <li>Modular React architecture with isolated components for countdown, particles, and audio controls</li>
+  <li>Dynamic URL query parameter handling for personalized stinger sequences</li>
+  <li>Comprehensive SEO optimization with Next.js App Router metadata, robots.ts, and sitemap.ts</li>
+</ul>`,
+    projectImage: "/doomsday_clock.png",
+    tags: ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS 4", "HTML5 Canvas", "Web Audio API", "Web App"],
+    members: [],
+    liveLink: "https://doomsday-dusky.vercel.app/",
+    githubLink: "https://github.com/Onkar-Satale/doomsDAY",
+    featured: false,
+    startDate: "2026-02-01",
+    endDate: "2026-02-21"
   }
 ];
 

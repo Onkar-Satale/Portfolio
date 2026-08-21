@@ -14,7 +14,7 @@ export default function LeadershipSection() {
   return (
     <motion.section
       id="leadership"
-      className="py-20 md:py-28 bg-slate-50 dark:bg-black border-y border-slate-200 dark:border-neutral-800 transition-colors duration-300"
+      className="py-20 md:py-28 bg-slate-50 dark:bg-black transition-colors duration-300"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, amount: 0.1 }}

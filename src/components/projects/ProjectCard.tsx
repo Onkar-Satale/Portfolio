@@ -39,11 +39,11 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             {/* The main card content - NOT a link itself */}
             <div className="bg-white dark:bg-neutral-900 rounded-xl shadow-sm flex flex-col h-full border border-transparent transition-all duration-300 group-hover:shadow-lg group-hover:border-blue-500/50">
                 {project.projectImage && (
-                    <div className="aspect-video w-full">
+                    <div className="aspect-video w-full overflow-hidden rounded-t-xl bg-slate-100 dark:bg-neutral-800">
                         <img 
                             src={project.projectImage} 
                             alt={project.name} 
-                            className="w-full h-full object-cover rounded-t-xl"
+                            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                         />
                     </div>
                 )}

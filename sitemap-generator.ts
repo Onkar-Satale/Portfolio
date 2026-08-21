@@ -7,10 +7,12 @@ export default async function getProjectRoutes() {
     
     // Hardcoded projects instead of fetching from API
     const projects = [
-      { id: 'project1' },
-      { id: 'project2' },
-      { id: 'project3' },
-      // add more if needed
+      { id: 'mcu-doomsday-clock' },
+      { id: 'packmate' },
+      { id: 'swiftapi' },
+      { id: 'academic-portal' },
+      { id: 'shivmala-foundation' },
+      { id: 'portfolio-website' },
     ];
 
     if (!Array.isArray(projects)) {
