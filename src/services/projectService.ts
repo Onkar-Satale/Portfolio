@@ -118,45 +118,52 @@ const STATIC_PROJECTS: Project[] = [
   },
   {
     id: "shivmala-foundation",
-    name: "Shivmala Foundation Platform",
+    name: "Shivmala Foundation",
     category: { id: "webapp", name: "Web App" },
-    shortDescription: "A platform for Shivmala Foundation featuring a dynamic campaign showcase, automated media gallerie and videos.",
-    longDescription: `
-<h3>About the Project</h3>
+    shortDescription: "An official MERN platform for Shivmala Foundation featuring dynamic campaign showcases, an automated media gallery with lightbox, nested project navigation, and an integrated AI chatbot.",
+    longDescription: `<h3>About the Project</h3>
 <p>
-The Shivmala Foundation website serves as the central digital platform for the NGO, designed to showcase social initiatives, campaigns, and community impact. The application focuses on delivering a visually engaging and user-friendly experience, allowing visitors to explore projects, view media content, and understand the foundation’s mission. Built using modern frontend technologies, the project emphasizes responsiveness, smooth interactions, and clean UI/UX design.
+The official digital platform for <strong>Shivmala Foundation</strong>, dedicated to driving positive community impact by showcasing social initiatives, active campaigns, categorized media, and seamless community engagement. The platform blends rich aesthetics, smooth zoom animations, glassmorphism, and an integrated AI assistant.
 </p>
 
 <br/>
 
 <h3>Key Features</h3>
 <ul>
-<li><strong>Dynamic Hero Section & Carousel:</strong> Visually engaging landing section with smooth animations and transitions to capture user attention.</li>
-<li><strong>Campaign & Causes Showcase:</strong> Interactive and modern card-based layout to highlight active and past social initiatives with clear presentation.</li>
-<li><strong>Categorized Media Gallery:</strong> Structured gallery with images and videos, featuring a full-screen lightbox for an immersive viewing experience.</li>
-<li><strong>Nested Projects Navigation:</strong> Multi-level dropdowns and accordion components for organized and intuitive browsing of initiatives.</li>
-<li><strong>Fully Responsive Design:</strong> Optimized for seamless performance across desktops, tablets, and mobile devices.</li>
-<li><strong>Modern UI/UX Design:</strong> Implementation of glassmorphism, smooth hover effects, and clean typography for a premium user experience.</li>
-<li><strong>Reusable Component Architecture:</strong> Modular React component structure ensuring scalability and maintainability.</li>
+  <li><strong>Dynamic Hero Section & Carousel:</strong> Visually engaging hero area with smooth zoom animations and transitions to captivate visitors.</li>
+  <li><strong>Campaign & Causes Showcase:</strong> Rich details and modern animated cards highlighting active and past social initiatives.</li>
+  <li><strong>Categorized Media Gallery:</strong> Automated, immersive media gallery featuring full-screen lightbox viewing for high-resolution photos and videos.</li>
+  <li><strong>Nested Projects Navigation:</strong> Multi-level dropdowns and accordions for organized browsing of ongoing initiatives.</li>
+  <li><strong>Integrated AI Chatbot:</strong> Interactive assistant with graceful session handling and state management for visitor inquiries.</li>
+  <li><strong>Fully Responsive:</strong> Optimized for seamless performance across desktop, tablet, and mobile devices.</li>
+</ul>
+
+<br/>
+
+<h3>Tech Stack</h3>
+<ul>
+  <li><strong>Frontend:</strong> React.js, Vanilla CSS Keyframes & Glassmorphism</li>
+  <li><strong>Backend & Database:</strong> Node.js, Express.js, MongoDB (MERN Stack)</li>
+  <li><strong>AI Integration:</strong> AI Chatbot with Session State Management</li>
+  <li><strong>Deployment:</strong> Vercel (Frontend), Render (Backend)</li>
 </ul>
 
 <br/>
 
 <h3>Project Highlights</h3>
 <ul>
-<li>Clean and structured frontend architecture</li>
-<li>Strong focus on UI/UX and visual storytelling</li>
-<li>Real-world NGO use case demonstrating practical application</li>
-<li>Optimized performance with smooth transitions and responsive layouts</li>
-</ul>
-`  ,  projectImage: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=800&q=80",
-    tags: ["React", "CSS","Web3Forms API" ],
+  <li>Clean, scalable full-stack MERN architecture with modular component structure</li>
+  <li>Rich aesthetic design with custom color palettes and dynamic micro-animations</li>
+  <li>Real-world NGO use case driving community outreach and transparent impact reporting</li>
+</ul>`,
+    projectImage: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=800&q=80",
+    tags: ["React", "Node.js", "Express.js", "MongoDB", "AI Chatbot", "MERN Stack", "Web3Forms API", "Web App"],
     members: [],
     liveLink: "https://shivmalafoundation.vercel.app/",
     githubLink: "https://github.com/Onkar-Satale/Shivmala_Foundation",
     featured: false,
-    startDate: "2026-03-01",
-    endDate: "2026-05-31"
+    startDate: "2025-10-01",
+    endDate: "2026-01-15"
   },
   {
     id: "portfolio-website",
