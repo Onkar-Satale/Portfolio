@@ -23,61 +23,102 @@ const STATIC_CATEGORIES = [
 const STATIC_PROJECTS: Project[] = [
   {
     id: "packmate",
-    name: "PackMate – AI-Powered Travel Assistant",
+    name: "PackMate – AI-Powered Smart Travel & Packing Assistant",
     category: { id: "mern-genai", name: "MERN + GenAI" },
-    shortDescription: "Built a MERN travel assistant providing AI-powered packing recommendations based on trip details and real-time weather using Groq (Llama 3).",
-    longDescription: `<h3>PackMate – AI-Powered Travel Assistant</h3>
-<p>PackMate is a full-stack MERN travel platform designed to help travelers effortlessly plan trips, manage itineraries, and automatically generate highly optimized packing recommendations using Generative AI.</p>
+    shortDescription: "An enterprise-grade, full-stack AI travel management platform featuring weather-conscious packing list generation via Groq LLM, Vision AI suitcase scanning, RAG travel advisory chat with ChromaDB, trip journaling, and streaming .docx export.",
+    longDescription: `<h3>About the Project</h3>
+<p>
+<strong>PackMate</strong> is an enterprise-grade, full-stack AI travel companion engineered using a decoupled microservices architecture. It provides intelligent, weather-conscious packing generation, Vision AI suitcase reconciliation, RAG-based travel advisory chat with ChromaDB vector search over airline PDF guides, trip journaling, photo storage via Cloudinary CDN, and streaming .docx exports.
+</p>
+
 <br/>
-<h3>Key Highlights & Features</h3>
+
+<h3>Key Features</h3>
 <ul>
-  <li><strong>AI-Powered Packing Recommendations:</strong> Built a MERN travel assistant providing intelligent packing suggestions based on destination details and real-time weather conditions.</li>
-  <li><strong>Groq (Llama 3) Integration:</strong> Integrated Groq LLM API to generate personalized, context-aware smart packing lists tailored for travelers.</li>
-  <li><strong>Comprehensive Security & Management:</strong> Implemented secure JWT authentication, trip itinerary management, budget tracking, and persistent user sessions.</li>
+  <li><strong>Context-Aware AI Packing Assistant:</strong> Generates tailored, weather-aware packing lists based on destination, duration, activities, party size, and luggage limits using Groq LLM (Llama 3).</li>
+  <li><strong>Vision AI Suitcase Scanner:</strong> One-click image analysis of packed or unpacked suitcases using Vision LLM to automatically reconcile items against packing checklists.</li>
+  <li><strong>RAG Travel Advisor Chatbot:</strong> Knowledge-base retrieval engine powered by ChromaDB vector search and local travel guide PDFs, delivering precise, hallucination-free travel advice.</li>
+  <li><strong>Live Weather Forecasting:</strong> Integrated OpenCage Geocoding API to dynamically adjust clothing and essential recommendations to real-time climate conditions.</li>
+  <li><strong>Comprehensive Trip CRUD & Journaling:</strong> End-to-end trip itinerary management, custom packing checkboxes, traveler lists, and personal travel notes.</li>
+  <li><strong>Cloud Photo Storage:</strong> Seamless trip photo upload and memory storage integrated with Cloudinary CDN.</li>
+  <li><strong>Streaming DOCX Export:</strong> Instant packing list download formatted as interactive Microsoft Word (.docx) documents.</li>
+  <li><strong>Enterprise Security:</strong> Stateless JWT authentication with access/refresh token rotation, bcrypt password hashing, and express-rate-limit protection.</li>
 </ul>
+
 <br/>
+
 <h3>Tech Stack</h3>
 <ul>
-  <li><strong>Frontend:</strong> React.js, Responsive UI/UX</li>
-  <li><strong>Backend:</strong> Node.js, Express.js</li>
-  <li><strong>Database:</strong> MongoDB</li>
-  <li><strong>AI & LLM:</strong> Groq API (Llama 3), GenAI</li>
-  <li><strong>Security:</strong> JWT Authentication</li>
+  <li><strong>Frontend:</strong> React 18, React Router v6, Axios, Custom CSS3</li>
+  <li><strong>Primary Backend:</strong> Node.js (ESM), Express.js, Mongoose ODM, Winston</li>
+  <li><strong>AI Microservice:</strong> Python 3.10+, FastAPI, Uvicorn, Groq SDK (Llama 3)</li>
+  <li><strong>Vector Database:</strong> ChromaDB, HuggingFace Sentence Transformers (12 Travel Guide PDFs)</li>
+  <li><strong>Database & Media:</strong> MongoDB Atlas, Cloudinary CDN</li>
+  <li><strong>External APIs:</strong> OpenCage Geocoding API, Groq Cloud API</li>
+  <li><strong>Deployment:</strong> Vercel (Frontend), Render (Backend & AI Microservice), Docker</li>
+</ul>
+
+<br/>
+
+<h3>System Architecture</h3>
+<ul>
+  <li>Decoupled microservices architecture separating Express API Gateway from high-compute Python AI workloads</li>
+  <li>Sub-second RAG retrieval pipeline querying embedded vector stores for verified airline rules</li>
+  <li>Asynchronous Groq LLM inference pipeline with temperature-tuned generation prompts</li>
 </ul>`,
     projectImage: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
-    tags: ["React", "Node.js", "Express.js", "MongoDB", "GenAI", "Groq LLM", "JWT"],
+    tags: ["React 18", "Node.js", "Express.js", "FastAPI", "Python", "Groq LLM", "ChromaDB", "RAG", "Vision AI", "MongoDB", "GenAI", "JWT Auth", "Cloudinary"],
     members: [],
-    liveLink: "https://packmatefrontend.vercel.app",
-    githubLink: "https://github.com/Onkar-Satale/Packmate_genai_mern-project",
+    liveLink: "https://packmatefrontend.vercel.app/",
+    githubLink: "https://github.com/Onkar-Satale/Packmate",
     featured: true,
     startDate: "2025-08-01",
     endDate: "2026-01-01"
   },
   {
     id: "swiftapi",
-    name: "Swift API – Smart API Testing Tool",
+    name: "Swift API – Smart API Testing & AI Debugging Platform",
     category: { id: "mern-genai", name: "MERN + GenAI" },
-    shortDescription: "Built a MERN API testing platform featuring request execution, collections, history, and an AI assistant (FastAPI + Groq LLM) for automated error diagnosis.",
-    longDescription: `<h3>Swift API – Smart API Testing Tool</h3>
-<p>Swift API is a modern MERN API testing platform featuring request execution, collection organization, history management, and workspace tools, enhanced with an AI debugging assistant.</p>
+    shortDescription: "A modern, full-stack API client and developer productivity platform featuring multi-method HTTP testing, request collections, history persistence, and a Python FastAPI + Groq LLM assistant for automated error root-cause diagnosis.",
+    longDescription: `<h3>About the Project</h3>
+<p>
+<strong>Swift API</strong> is a modern, lightweight, full-stack API client and developer productivity tool built as an intelligent alternative to Postman. Designed using a decoupled microservices architecture, Swift API delivers high-throughput HTTP testing, collection workflows, and an automated AI error debugging assistant driven by Groq LLM and Python FastAPI.
+</p>
+
 <br/>
-<h3>Key Highlights & Features</h3>
+
+<h3>Key Features</h3>
 <ul>
-  <li><strong>Full-Stack API Testing Platform:</strong> Built a comprehensive MERN API testing platform featuring request execution (GET, POST, PUT, DELETE), collections, history tracking, and workspace management.</li>
-  <li><strong>AI Debugging Assistant:</strong> Integrated an AI assistant using Python FastAPI and Groq LLM for automated API error diagnosis and instant fix suggestions.</li>
-  <li><strong>Secure & Structured:</strong> Implemented JWT authentication, secure REST APIs, and structured JSON response parsing for developer testing.</li>
+  <li><strong>Multi-Method Request Engine:</strong> Execute GET, POST, PUT, DELETE, and PATCH requests with custom key-value headers, query parameters, and JSON/Form payload support.</li>
+  <li><strong>AI-Powered Error Debugger:</strong> One-click intelligent root cause analysis on HTTP error responses (4xx, 5xx), generating actionable fix suggestions powered by Groq LLM (Llama 3) and a dedicated FastAPI microservice.</li>
+  <li><strong>Persistent Request History:</strong> Automatically logs all executed API calls in MongoDB for instant recall, inspection, and re-testing.</li>
+  <li><strong>Collections & Workflows:</strong> Group related endpoints into structured collections for organized testing and multi-step API workflows.</li>
+  <li><strong>Secure JWT Authentication:</strong> Token-based authentication featuring access/refresh token rotation and secure HTTP-only cookies.</li>
+  <li><strong>JSON Formatter & Code Editor:</strong> Formatted JSON response viewer with syntax highlighting and integrated Ace editor capabilities.</li>
+  <li><strong>Security Hardening & Rate Limiting:</strong> Express rate limiting, Helmet security headers, CORS allowlisting, and secure inter-service API keys.</li>
 </ul>
+
 <br/>
+
 <h3>Tech Stack</h3>
 <ul>
-  <li><strong>Frontend:</strong> React.js</li>
-  <li><strong>Backend:</strong> Node.js, Express.js, FastAPI (Python)</li>
-  <li><strong>Database:</strong> MongoDB</li>
-  <li><strong>AI Integration:</strong> Groq LLM API</li>
-  <li><strong>Security & Utils:</strong> JWT Authentication, JSON Response Parsing</li>
+  <li><strong>Frontend:</strong> React 18, React Router v7, Ace Editor, CSS Modules</li>
+  <li><strong>Primary Backend:</strong> Node.js (ESM), Express.js, Mongoose, Winston</li>
+  <li><strong>AI Microservice:</strong> Python 3.10+, FastAPI, Uvicorn, Groq SDK (Llama 3)</li>
+  <li><strong>Database:</strong> MongoDB / MongoDB Atlas</li>
+  <li><strong>Security & DevOps:</strong> JWT Auth, bcryptjs, Helmet, Express Rate Limit, Docker, Vercel, Render</li>
+</ul>
+
+<br/>
+
+<h3>System Architecture</h3>
+<ul>
+  <li>Decoupled microservices architecture separating client requests from AI compute workloads</li>
+  <li>High-throughput Express proxy gateway handling target API calls with error boundary capture</li>
+  <li>Asynchronous Groq LLM inference pipeline delivering sub-second error explanations</li>
 </ul>`,
     projectImage: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80",
-    tags: ["React", "Node.js", "Express.js", "MongoDB", "GenAI", "FastAPI", "Groq LLM", "REST APIs"],
+    tags: ["React 18", "Node.js", "Express.js", "FastAPI", "Python", "Groq LLM", "MongoDB", "GenAI", "JWT Auth", "REST APIs"],
     members: [],
     liveLink: "https://swift-api-iota.vercel.app/",
     githubLink: "https://github.com/Onkar-Satale/Swift_API_mern-",
@@ -88,27 +129,47 @@ const STATIC_PROJECTS: Project[] = [
   {
     id: "academic-portal",
     name: "Academic Engagement Portal",
-    category: { id: "all", name: "MERN App" },
-    shortDescription: "Built a full-stack academic portal for efficient course administration, user roles, educational resources, and relational SQL database operations.",
-    longDescription: `<h3>Academic Engagement Portal</h3>
-<p>A full-stack web application designed to centralize academic management, course administration, user roles, and educational resource sharing.</p>
+    category: { id: "webapp", name: "Web App" },
+    shortDescription: "A full-stack campus engagement and institutional governance platform featuring a 3-tier sequential permission workflow, 7 RBAC roles, single-chair executive management, and real-time in-app notifications.",
+    longDescription: `<h3>About the Project</h3>
+<p>
+<strong>Academic Engagement Portal</strong> is a production-ready, full-stack campus engagement and institutional governance platform engineered for colleges and universities. It digitizes club operations, event administration, and institutional permissions through a 3-tier sequential approval pipeline across campus leadership.
+</p>
+
 <br/>
-<h3>Key Highlights & Features</h3>
+
+<h3>Key Features</h3>
 <ul>
-  <li><strong>Academic Administration:</strong> Built a full-stack academic portal for efficient course administration, user role management, and educational resource distribution.</li>
-  <li><strong>Relational SQL Architecture:</strong> Designed a structured SQL database schema for managing users, roles, courses, and academic records efficiently.</li>
-  <li><strong>Scalable Backend Services:</strong> Developed secure backend microservices using Node.js, Express.js, and scalable REST APIs for academic operations.</li>
+  <li><strong>3-Tier Hierarchical Approval Pipeline:</strong> Sequential permission review through Club Mentor (Level 1), Estate Manager (Level 2), and Principal (Level 3) with audit remarks, rejection edit & resubmit, and automated public event publishing upon final sanction.</li>
+  <li><strong>Role-Based Access Control (RBAC) & 7 Distinct Roles:</strong> Strict career-track boundary checks isolating the Student Track (Student, Club Head) and Faculty Track (Teacher, Mentor, Estate Manager, Principal, Admin) to prevent privilege escalation.</li>
+  <li><strong>Single-Chair Executive Management:</strong> Dynamic seat reallocation for single-holder executive chairs (Principal, Estate Manager, Admin) with automatic role handoff and transition alerts.</li>
+  <li><strong>Club Ecosystem & Membership Lifecycle:</strong> Categorized club directory with join applications, statement evaluations, and student enrollment dashboard.</li>
+  <li><strong>Event Lifecycle & RSVP System:</strong> Centralized event catalog, one-click duplicate-free student RSVP registrations, and personalized event schedules.</li>
+  <li><strong>Real-Time Notification Engine:</strong> Instant in-app notifications with read/unread tracking, counter badges, and deep-linking to review dashboards.</li>
+  <li><strong>Enterprise-Grade Security:</strong> Stateless JWT authentication with access/refresh rotation, bcryptjs hashing, RFC email validation with typo detection, helmet, rate limiting, and parameterized SQL queries.</li>
 </ul>
+
 <br/>
+
 <h3>Tech Stack</h3>
 <ul>
-  <li><strong>Frontend:</strong> React.js</li>
-  <li><strong>Backend:</strong> Node.js, Express.js</li>
-  <li><strong>Database:</strong> SQL (Relational Schema)</li>
-  <li><strong>APIs:</strong> Scalable REST APIs</li>
+  <li><strong>Frontend:</strong> React 19, React Router v7, Vite 6, Axios, React Toastify</li>
+  <li><strong>Backend:</strong> Node.js (ESM), Express.js, Express Validator, Helmet</li>
+  <li><strong>Database:</strong> MySQL Server 8.0+ (Relational Schema with Foreign Keys & Indexing)</li>
+  <li><strong>Authentication:</strong> JWT Access/Refresh Token Rotation, bcryptjs</li>
+  <li><strong>Deployment:</strong> Vercel (Frontend), Render (Backend)</li>
+</ul>
+
+<br/>
+
+<h3>Project Highlights</h3>
+<ul>
+  <li>Complex institutional multi-tier sequential workflow with full audit logging</li>
+  <li>Strict architectural separation preventing student/faculty privilege escalation</li>
+  <li>Scalable relational database schema optimized with indexing and cascading constraints</li>
 </ul>`,
     projectImage: "https://images.unsplash.com/photo-1513258496099-48168024aec0?w=800&q=80",
-    tags: ["React", "Node.js", "Express.js", "SQL", "REST APIs"],
+    tags: ["React 19", "Node.js", "Express.js", "MySQL", "JWT Auth", "RBAC", "Vite 6", "REST APIs", "Web App"],
     members: [],
     liveLink: "https://academic-engagement-portal-kappa.vercel.app/",
     githubLink: "https://github.com/Onkar-Satale/Academic_Engagement_Portal",
