@@ -20,7 +20,7 @@ const STATIC_CATEGORIES = [
   { id: "webapp", name: "Web App", _id: "webapp" }
 ] as any;
 
-const STATIC_PROJECTS: Project[] = [
+export const STATIC_PROJECTS: Project[] = [
   {
     id: "packmate",
     name: "PackMate – AI-Powered Smart Travel & Packing Assistant",
@@ -337,7 +337,7 @@ export const getProjectCategories = async () => {
 };
 
 export const getRecentProjects = async () => {
-  return Promise.resolve(STATIC_PROJECTS.slice(0, 3));
+  return Promise.resolve(STATIC_PROJECTS);
 };
 
 export const getProjects = async ({ page = 1, limit = 6, categoryId, name }: {

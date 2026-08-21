@@ -134,7 +134,7 @@ export default function SkillsSection() {
             variants={containerVariants}
             initial="hidden"
             animate={hasBeenInView ? 'visible' : 'hidden'}
-            className="space-y-12"
+            className="space-y-12 max-w-5xl mx-auto"
           >
             {categories.map((category: SkillCategory) => (
               <motion.div key={category.id} variants={containerVariants}>
@@ -148,7 +148,6 @@ export default function SkillsSection() {
                 >
                   {category.skills?.length ? (
                     category.skills.map((skill) => {
-                      // Hybrid mode: prefer image, fallback to iconKey, finally fallback to first letter
                       const iconElement = skill.image
                         ? (
                           <img
@@ -190,3 +189,5 @@ export default function SkillsSection() {
     </motion.section>
   );
 }
+
+

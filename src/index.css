@@ -97,3 +97,24 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   box-shadow: 0 0 0 1000px #000000 inset !important;
   transition: background-color 5000000s ease-in-out 0s;
 }
+
+/* Seamless Continuous Projects Marquee (Pauses in place on hover, resumes without resetting) */
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-scroll {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 45s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-scroll:hover {
+  animation-play-state: paused;
+}
