@@ -3,6 +3,19 @@
 @import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --toast-bg: #ffffff;
+  --toast-color: #0f172a;
+  --toast-border: #e2e8f0;
+}
+
+.dark {
+  --toast-bg: #000000;
+  --toast-color: #ffffff;
+  --toast-border: #262626;
+}
+
 body {
   @apply font-sans bg-slate-50 text-slate-800 dark:bg-black dark:text-neutral-200 transition-colors duration-300;
   -webkit-font-smoothing: antialiased;

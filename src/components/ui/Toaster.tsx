@@ -5,16 +5,26 @@ export default function Toaster() {
     <HotToaster
       position="top-right"
       toastOptions={{
-        className: 'font-semibold dark:bg-[#0a0a0a] dark:text-white dark:border dark:border-neutral-800',
         duration: 4000,
         style: {
-          background: 'var(--toast-bg, #fff)',
-          color: 'var(--toast-color, #334155)',
+          background: 'var(--toast-bg, #ffffff)',
+          color: 'var(--toast-color, #0f172a)',
+          border: '1px solid var(--toast-border, #e2e8f0)',
+          fontWeight: 500,
+          borderRadius: '0.75rem',
+          padding: '12px 16px',
+          boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.2), 0 8px 10px -6px rgba(0, 0, 0, 0.1)',
         },
         success: {
           iconTheme: {
             primary: '#10b981',
-            secondary: 'white',
+            secondary: 'var(--toast-bg, #ffffff)',
+          },
+        },
+        error: {
+          iconTheme: {
+            primary: '#ef4444',
+            secondary: 'var(--toast-bg, #ffffff)',
           },
         },
       }}
