@@ -2,6 +2,7 @@ import type { ReactNode } from 'react';
 import { motion } from 'framer-motion';
 
 interface ActionButtonProps {
+  id?: string;
   href?: string;
   variant?: 'primary' | 'outline';
   children: ReactNode;
@@ -12,6 +13,7 @@ interface ActionButtonProps {
 }
 
 export default function ActionButton({ 
+  id,
   href, 
   variant = 'primary', 
   children, 
@@ -33,6 +35,7 @@ export default function ActionButton({
   if (href) {
     return (
       <a
+        id={id}
         href={href}
         target={isExternal ? '_blank' : '_self'}
         rel={isExternal ? 'noopener noreferrer' : ''}
@@ -48,6 +51,7 @@ export default function ActionButton({
   // Otherwise, render a button
   return (
     <button
+      id={id}
       onClick={onClick}
       className={fullClassName}
     >

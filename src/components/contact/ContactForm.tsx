@@ -1,7 +1,9 @@
+import { useState } from "react";
 import { useForm, Controller, type SubmitHandler } from "react-hook-form";
 import { useMutation } from "@tanstack/react-query";
 import toast from "react-hot-toast";
 import Button from "../ui/Button";
+import FlyingBirdOverlay from "../ui/FlyingBirdOverlay";
 
 interface ContactFormData {
   name: string;
@@ -11,6 +13,8 @@ interface ContactFormData {
 }
 
 export default function ContactForm() {
+  const [isFlying, setIsFlying] = useState(false);
+  const [flightId, setFlightId] = useState(0);
   const { control, handleSubmit, reset } = useForm<ContactFormData>({
     defaultValues: { name: "", email: "", subject: "", message: "" },
   });
@@ -34,14 +38,21 @@ export default function ContactForm() {
       return result;
     },
     onSuccess: () => {
-      toast.success("Your message has been sent successfully!");
-      reset();
+      // Trigger the flying bird animation with a new guaranteed different path!
+      setFlightId((prev) => prev + 1);
+      setIsFlying(true);
     },
     onError: (error: any) => {
       console.error(error);
       toast.error("Failed to send message. Please try again.");
     },
   });
+
+  const handleFlightComplete = () => {
+    toast.success("Your message has been sent successfully!");
+    reset();
+    setIsFlying(false);
+  };
 
   const onSubmit: SubmitHandler<ContactFormData> = (data) => mutation.mutate(data);
 
@@ -98,10 +109,20 @@ export default function ContactForm() {
             />
           )}
         />
-        <Button type="submit" isLoading={mutation.isPending} className="w-full !py-2.5">
+        <Button id="contact-submit-btn" type="submit" isLoading={mutation.isPending} className="w-full !py-2.5">
           Send Message
         </Button>
       </form>
+
+      {isFlying && (
+        <FlyingBirdOverlay
+          key={flightId}
+          patternIndex={(flightId - 1) % 3}
+          sourceId="contact-submit-btn"
+          targetId="nav-get-in-touch"
+          onComplete={handleFlightComplete}
+        />
+      )}
     </div>
   );
 }

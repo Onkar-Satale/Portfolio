@@ -115,7 +115,11 @@ export default function Header() {
               {isDarkMode ? <FiSun size={20} /> : <FiMoon size={20} />}
             </button>
             <div className="hidden md:block">
-              <ActionButton href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}>
+              <ActionButton 
+                id="nav-get-in-touch"
+                href="#contact" 
+                onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}
+              >
                 Get in Touch
               </ActionButton>
             </div>
