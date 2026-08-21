@@ -48,6 +48,7 @@ export default function JourneySection() {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
+                onMouseEnter={() => setActiveTab(tab.id)}
                 className="cursor-pointer relative px-5 py-2 rounded-full text-sm font-semibold transition-colors focus:outline-none"
               >
                 {activeTab === tab.id && (
